@@ -1,6 +1,40 @@
 <template>
 	<div class="main-header-box">
 		<header class="main-header">
+			<ClientOnly>
+<!--			<p>{{ t('hello') }}</p>-->
+			<p>{{ t('message.hello') }}</p>
+			{{ $t('lang') }} ...lang...
+			<br/>{{ $t('home.header.title') }}
+			<br/>{{ $t('home.welcomeMessage') }}
+			<br/>{{ $t('header.title') }}
+			<br/>{{ $i18n.locales }}
+			<div v-for="locale in $i18n.locales" :key="locale.code">
+				<span @click="setLanguage(locale)">
+					{{ locale.code.toUpperCase() }}
+				</span>
+			</div>
+			<el-select v-model="locale" @change="changeLocale">
+				<el-option label="English" value="en-US"></el-option>
+				<el-option label="中文" value="zh-CN"></el-option>
+			</el-select>
+			<el-input :placeholder="$t('el.select.placeholder')" />
+
+<!--			<el-select
+				clearable
+				v-model="value"
+				size="large"
+				style="width: 240px"
+			>
+				<el-option
+					v-for="item in options"
+					:key="item.value"
+					:label="item.label"
+					:value="item.value"
+				/>
+			</el-select>-->
+			<el-button @click="log($i18n)">log $i18n</el-button>
+			</ClientOnly>
 			<div class="container">
 				<a href="/" class="logo">
 					<ClientOnly>
@@ -156,7 +190,7 @@
 											</el-dialog>
 										</ClientOnly>
 									</div>
-									<div v-show="useGlobalStore.getUserInfo" class="avatar-wrapper" data-v-d86115f8="">
+<!--									<div v-show="useGlobalStore.getUserInfo" class="avatar-wrapper" data-v-d86115f8="">
 										<el-popconfirm
 											width="220"
 											confirm-button-text="yes"
@@ -175,7 +209,7 @@
 												/>
 											</template>
 										</el-popconfirm>
-									</div>
+									</div>-->
 								</li>
 							</ul>
 						</ClientOnly>
@@ -195,6 +229,13 @@ import Cookies from 'js-cookie'
 import { Login } from '@/api/interface'
 import { login, setToken } from '@/api/user'
 import { GlobalStore } from '@/store'
+
+import { useI18n } from 'vue-i18n'
+
+/*const { t } = useI18n({
+	useScope: 'local'
+})*/
+const { locale, t } = useI18n(/*{ useScope: 'local' }*/)
 const useGlobalStore = GlobalStore()
 const router = useRouter()
 const navList = [
@@ -244,7 +285,31 @@ const rules = reactive<FormRules>({
 	name: [{ required: true, message: '手机号或邮箱不能为空', trigger: 'blur' }],
 	password: [{ required: true, message: '密码不能为空', trigger: 'blur' }],
 })
+const setLanguage = (/*_locale*/) => {
+	console.error('修改lang',_locale)
+	locale.value = _locale.code
+}
 
+const changeLocale = (_locale) => {
+	console.error('修改lang',_locale)
+	locale.value = _locale
+}
+const log = (in8) => {
+	console.log(in8, 'log...')
+}
+
+const value = ref('')
+
+const options = [
+	{
+		value: 'Option1',
+		label: 'Option1',
+	},
+	{
+		value: 'Option2',
+		label: 'Option2',
+	}
+	]
 // 打开登录对话框
 // const openDialog = () => {
 // 	visible.value = true
@@ -451,3 +516,13 @@ const changeThemePriamry = (val: string) => {
 	}
 }
 </style>
+<!--<i18n lang="json"> // @nuxtjs/i18n
+{
+	"en": {
+		"hello": "hello world!"
+	},
+	"zh": {
+		"hello": "こんにちは、世界!"
+	}
+}
+</i18n>-->
