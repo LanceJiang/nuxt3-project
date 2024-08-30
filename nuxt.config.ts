@@ -19,8 +19,8 @@ export default defineNuxtConfig({
 			baseUrl: loadEnv(process.argv[process.argv.length - 1], './env').VITE_API_URL,
 		},
 	},
-	modules: ['@pinia/nuxt', 'nuxt-windicss', '@nuxtjs/i18n'], //
-	i18n: {
+	modules: ['@pinia/nuxt', 'nuxt-windicss'], // , '@nuxtjs/i18n'
+	/*i18n: {
 		locales: [
 			{ code: 'zh', iso: 'zh-CN', file: 'zh-CN.ts' },
 			{ code: 'en', iso: 'en-US', file: 'en-US.ts' }
@@ -30,7 +30,7 @@ export default defineNuxtConfig({
 		// strategy: 'prefix_except_default',
 		strategy: 'no_prefix',
 		// vueI18n: './locales/nuxt-i18n.ts'
-	},
+	},*/
 	vite: {
 		css: {
 			preprocessorOptions: {
