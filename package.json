@@ -39,6 +39,7 @@
 		"js-cookie": "^3.0.1",
 		"markdown-it": "^13.0.1",
 		"moment": "^2.29.4",
+		"nuxt-windicss": "^3.0.1",
 		"pinia": "^2.0.30",
 		"pinia-plugin-persistedstate": "^3.0.2"
 	},

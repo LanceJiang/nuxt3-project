@@ -4,6 +4,9 @@ import { loadEnv } from 'vite'
 
 export default defineNuxtConfig({
 	devtools: { enabled: true },
+	devServer: {
+		port: 4000
+	},
 	app: {
 		head: {
 			meta: [{ name: 'referrer', content: 'no-referrer' }],
@@ -16,7 +19,7 @@ export default defineNuxtConfig({
 			baseUrl: loadEnv(process.argv[process.argv.length - 1], './env').VITE_API_URL,
 		},
 	},
-	modules: ['@pinia/nuxt'],
+	modules: ['@pinia/nuxt', 'nuxt-windicss'],
 	vite: {
 		css: {
 			preprocessorOptions: {
