@@ -1,0 +1,93 @@
+//$topHeader: 90px;
+.main-header {
+	&-box {
+		position: relative;
+		height: $topHeader;
+	}
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: all 0.2s;
+	//background: var(--navbar-background-color);
+	//border-bottom: 1px solid var(--border-line-color);
+	//color: var(--juejin-color-nav-title);
+	height: $topHeader;
+	z-index: 250;
+
+	.local_container {
+		//margin: auto;
+		height: 100%;
+		//max-width: 1440px;
+		box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.15);
+		background: #fff;
+
+		.inner-wrap {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+
+		.right-actions {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			//color: #000;
+			//font-size: 14px;
+			//font-weight: 600;
+
+			//:deep(.el-button) {
+			.el-button {
+				color: #000;
+				border-color: #000;
+				//font-size: 14px;
+				font-weight: 600;
+
+				&:hover {
+					border-color: #000;
+					background: var(--el-fill-color-light);
+				}
+			}
+		}
+	}
+	.main-nav.el-menu {
+
+		--el-menu-horizontal-height: 48px;
+		--el-menu-active-color: #3054E5;
+		--el-menu-text-color: #000;
+		--el-menu-base-level-padding: 14px;
+
+		//:deep(.el-menu-item) {
+		.el-menu-item {
+			border-bottom: 0;
+			font-weight: 600;
+
+			&.is-active {
+				background-color: var(--el-menu-active-color);
+				color: #fff !important;
+			}
+
+			&.logo {
+				background-color: transparent;
+			}
+		}
+
+		//:deep(.el-sub-menu) {
+		.el-sub-menu {
+			.el-sub-menu__title {
+				font-weight: 600;
+				//color: #000;
+			}
+		}
+
+		border-bottom: 0;
+		//flex: 1 0 auto;
+		//display: inline-flex;
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+}

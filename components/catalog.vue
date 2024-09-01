@@ -126,7 +126,7 @@ onMounted(() => {
 			}
 			li a {
 				line-height: 2;
-				@include text-overflow();
+				@include text-ellipsis_line();
 				&:hover {
 					color: var(--link-color);
 				}

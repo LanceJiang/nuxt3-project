@@ -1,5 +1,5 @@
 <template>
-	<div class="container index-container">
+	<div class="page-container">
 		<TopHeader />
 		<main class="main-container">
 			<slot />
@@ -10,10 +10,7 @@
 <script></script>
 
 <style lang="scss" scoped>
-.index-container {
-	max-width: 1200px;
-}
-.container {
+.page-container {
 	position: relative;
 	margin: 0 auto;
 	width: 100%;
