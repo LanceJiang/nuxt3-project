@@ -1,7 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 import { resolve } from 'pathe'
 import { loadEnv } from 'vite'
-
+import svgLoader from 'vite-svg-loader'
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	devServer: {
@@ -10,6 +10,9 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			meta: [{ name: 'referrer', content: 'no-referrer' }],
+			link: [
+				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+			]
 		},
 	},
 	runtimeConfig: {
@@ -36,9 +39,13 @@ export default defineNuxtConfig({
 			preprocessorOptions: {
 				scss: {
 					additionalData: '@use "@/assets/styles/global.scss" as *;', // 注意文件路径要配成自己的
+					// additionalData: '@import "@/assets/styles/global.scss";', // 注意文件路径要配成自己的
 				},
 			},
 		},
+		plugins: [
+			svgLoader()
+		]
 	},
 	css: [/*'element-plus/dist/index.css', */'assets/styles/index.scss', 'assets/styles/juejin.css'],
 	alias: {
