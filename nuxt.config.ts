@@ -38,8 +38,8 @@ export default defineNuxtConfig({
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: '@use "@/assets/styles/global.scss" as *;', // 注意文件路径要配成自己的
-					// additionalData: '@import "@/assets/styles/global.scss";', // 注意文件路径要配成自己的
+					additionalData: '@use "@/assets/styles/variables.scss" as *;', // 注意文件路径要配成自己的
+					// additionalData: '@import "@/assets/styles/variables.scss";', // 注意文件路径要配成自己的
 				},
 			},
 		},

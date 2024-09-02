@@ -1,8 +1,10 @@
+@import "./reset.scss";
 html,
 body {
-	margin: 0;
-	padding: 0;
 	font-size: $rootValue + px;
+	//font-family: Inter;
+	--el-font-family: "Inter"; // "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif, "Inter";
+	font-family: var(--el-font-family);
 }
 
 // 解决 锚点位置被头部导航挡住部分内容的问题
@@ -10,22 +12,14 @@ html {
 	scroll-padding-top: 6rem;
 }
 
-ol,
-ul,
-li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-a {
+/*a {
 	text-decoration: none;
 	color: #000;
 }
 
 img {
 	border-style: none;
-}
+}*/
 // 全局滚动条样式
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{border-radius:6px;background: rgb(0 0 0 / 5%);}
@@ -35,3 +29,100 @@ img {
 ::-webkit-scrollbar-thumb:hover{background-color:rgba(0,0,0,0.4)}
 ::-webkit-scrollbar-thumb:active{background:rgba(0,0,0,0.6)}
 
+#themeConfig {
+	&.light {
+		--layout-background-color: #f4f5f5; // 布局背景颜色
+		--primary-color: #000; // 主要的字体颜色
+		--secondary-color: #212121; // 次一级字体颜色，例如：文章描述
+		--primary-background-color: #ffffff; // 主要的背景色
+		--navbar-background-color: #ffffff; // navbar组件的背景色
+		--juejin-color-nav-title: #515767; // navbar组件字体颜色
+		--link-color: #0070f3; // 链接 hover 上去的颜色
+		--article-title-color: #000; // 文章标题字体颜色
+		--article-desc-color: #86909c; // 文章描述字体颜色
+		--article-hover-bg: #fafafa; // 文章hover背景颜色
+		--border-line-color: #9797971a; // 边框颜色
+		--juejin-gray-3: #f7f8fa;
+		--juejin-brand-5-light: #eaf2ff;
+		--juejin-font-3: #8a919f;
+		--juejin-gray-1-2: rgba(228, 230, 235, 0.5);
+	}
+	&.dark {
+		--layout-background-color: #000;
+		--primary-color: #ffffff;
+		--secondary-color: #f9f9f999;
+		--primary-background-color: #0e0e0e;
+		--navbar-background-color: #272727;
+		--juejin-color-nav-title: #e3e3e3;
+		--link-color: #34a8eb;
+		--article-title-color: #e3e3e3;
+		--article-desc-color: #a9a9a9;
+		--article-hover-bg: #3a3a3a;
+		--border-line-color: #9797971a;
+		--juejin-gray-3: #f7f8fa;
+		--juejin-brand-5-light: #eaf2ff;
+		--juejin-font-3: #8a919f;
+		--juejin-gray-1-2: rgba(228, 230, 235, 0.5);
+	}
+	color: var(--primary-color);
+}
+.common-inner-auto {
+	margin: 0 auto;
+	//width: 1320px;
+	max-width: 1340px; // 1320 + 2*10
+	padding: 0 10px;
+}
+// 超出隐藏样式1
+.text-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// 超出隐藏样式2
+.text-ellipsis_line_1 {
+	@include text-ellipsis_line();
+}
+
+// 公用path页面外壳
+.column-page-wrap {
+	flex: 1;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	min-height: 0;
+}
+
+.part-title {
+	color: #000;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: normal;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 24px;
+}
+
+.part-button {
+
+}
+.el-button {
+	--el-color-primary: #3054E5;
+	--el-color-primary-light-3: #5673e3;
+	height: 34px;
+}
+/*
+.el-button {
+	color: #000;
+	border-color: #000;
+	//font-size: 14px;
+	font-weight: 600;
+
+	&:hover {
+		border-color: #000;
+		background: var(--el-fill-color-light);
+	}
+}*/
+.transform {
+	transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}

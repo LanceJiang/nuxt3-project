@@ -30,11 +30,11 @@
 						</el-sub-menu>-->
 					</el-menu>
 					<div class="right-actions">
-						<el-button text size="large">
+						<el-button text>
 							<svg_SingnIn />
 							Sign In
 						</el-button>
-						<el-button round size="large">
+						<el-button round>
 							sign up for free
 						</el-button>
 					</div>

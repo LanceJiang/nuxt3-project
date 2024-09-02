@@ -15,7 +15,7 @@
 	margin: 0 auto;
 	width: 100%;
 }
-.main-container {
+/*.main-container {
 	margin-top: 1.62rem;
-}
+}*/
 </style>

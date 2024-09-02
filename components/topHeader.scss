@@ -1,10 +1,5 @@
 //$topHeader: 90px;
 .main-header {
-	&-box {
-		position: relative;
-		height: $topHeader;
-	}
-
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -15,6 +10,11 @@
 	//color: var(--juejin-color-nav-title);
 	height: $topHeader;
 	z-index: 250;
+
+	&-box {
+		position: relative;
+		height: $topHeader;
+	}
 
 	.local_container {
 		//margin: auto;
@@ -60,6 +60,13 @@
 		--el-menu-text-color: #000;
 		--el-menu-base-level-padding: 14px;
 
+		border-bottom: 0;
+		//flex: 1 0 auto;
+		//display: inline-flex;
+		display: flex;
+		align-items: center;
+		gap: 40px;
+
 		//:deep(.el-menu-item) {
 		.el-menu-item {
 			border-bottom: 0;
@@ -82,12 +89,5 @@
 				//color: #000;
 			}
 		}
-
-		border-bottom: 0;
-		//flex: 1 0 auto;
-		//display: inline-flex;
-		display: flex;
-		align-items: center;
-		gap: 40px;
 	}
 }
