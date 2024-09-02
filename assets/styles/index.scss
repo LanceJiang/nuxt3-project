@@ -37,7 +37,8 @@ img {
 		--primary-background-color: #ffffff; // 主要的背景色
 		--navbar-background-color: #ffffff; // navbar组件的背景色
 		--juejin-color-nav-title: #515767; // navbar组件字体颜色
-		--link-color: #0070f3; // 链接 hover 上去的颜色
+		--link-color: #3054E5; // 链接 hover 上去的颜色
+		--link-color-3: #5673e3;
 		--article-title-color: #000; // 文章标题字体颜色
 		--article-desc-color: #86909c; // 文章描述字体颜色
 		--article-hover-bg: #fafafa; // 文章hover背景颜色
@@ -55,6 +56,7 @@ img {
 		--navbar-background-color: #272727;
 		--juejin-color-nav-title: #e3e3e3;
 		--link-color: #34a8eb;
+		--link-color-3: #52aee3;
 		--article-title-color: #e3e3e3;
 		--article-desc-color: #a9a9a9;
 		--article-hover-bg: #3a3a3a;
@@ -107,8 +109,9 @@ img {
 
 }
 .el-button {
-	--el-color-primary: #3054E5;
-	--el-color-primary-light-3: #5673e3;
+	//--el-color-primary: #3054E5;
+	--el-color-primary: var(--link-color);
+	--el-color-primary-light-3: var(--link-color-3);
 	height: 34px;
 }
 /*

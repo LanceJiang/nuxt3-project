@@ -118,7 +118,7 @@
 			</div>
 		</div>
 		<img class="sign-bar pointer mt-[20px]" src="@/assets/image/sign_bar_green.jpg" />
-footer....
+		<Footer />
 	</div>
 </template>
 

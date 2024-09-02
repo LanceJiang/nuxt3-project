@@ -56,7 +56,7 @@
 	.main-nav.el-menu {
 
 		--el-menu-horizontal-height: 48px;
-		--el-menu-active-color: #3054E5;
+		--el-menu-active-color: var(--link-color);
 		--el-menu-text-color: #000;
 		--el-menu-base-level-padding: 14px;
 
