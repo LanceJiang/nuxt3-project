@@ -117,7 +117,7 @@
 				</div>
 			</div>
 		</div>
-		<img class="sign-bar pointer mt-[20px]" src="@/assets/image/sign_bar_green.jpg" />
+		<img class="sign-bar cursor-pointer mt-[20px]" src="@/assets/image/sign_bar_green.jpg" />
 		<Footer />
 	</div>
 </template>
@@ -206,7 +206,8 @@ const ladders = [
 				//border-radius: 8px;
 			}
 			.title {
-				color: #212121;
+				//color: #212121;
+				color: var(--secondary-color);
 				font-size: 16px;
 				//font-style: normal;
 				font-weight: 700;

@@ -43,3 +43,8 @@ $topHeader: 90px;
 @function torem($px) {
 	@return decimalRound(math.div($px, $rootValue), 3) * 1rem;
 }
+
+$design-width: 1440px;
+@function px2vw($px) {
+	@return math.div($px, $design-width) * 100vw;
+}
