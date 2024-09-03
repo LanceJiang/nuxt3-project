@@ -170,11 +170,11 @@ const flexItems = [
 		}
 		.polygon_3 {
 			right: 0;
-			top: px2vw(1564px);
+			top: px2vw(1364px);
 		}
 		.polygon_4 {
 			left: 0;
-			top: px2vw(1127px);
+			top: px2vw(1727px);
 		}
 		.local-container {
 			position: relative;
@@ -224,6 +224,7 @@ const flexItems = [
 				padding: 34px 16px 24px;
 				border-radius: 8px;
 				border: 1px solid #edebe9;
+				background: #fff;
 				//width: 32%;
 				//width: calc(33.33% - 12px);
 				//width: calc(33.33% - 19px);
