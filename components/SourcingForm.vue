@@ -32,7 +32,7 @@
 			</el-dialog>
 		</el-form-item>
 		<el-form-item>
-			<el-button type="primary" class="w-full" round @click="onSubmit" :loading="loading">
+			<el-button type="primary" class="w-full" style="height: 40px !important;" round @click="onSubmit" :loading="loading">
 				Submit
 			</el-button>
 		</el-form-item>

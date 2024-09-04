@@ -145,7 +145,7 @@ const flexItems = [
 		}
 		.btn {
 			width: px2vw(230px);
-			height: px2vw(34px);
+			height: px2vw(34px); // !important;
 			font-size: px2vw(14px);
 			padding: 0;
 		}
@@ -250,31 +250,6 @@ const flexItems = [
 		.right-pic {
 			width: 782px;
 			flex-shrink: 0;
-		}
-	}
-
-	.growth-wrap {
-		color: var(--secondary-color);
-		.item {
-			display: flex;
-			//align-items: center;
-			gap: 40px;
-			img {
-				//width: 486px;
-				flex-shrink: 0;
-				//border-radius: 8px;
-			}
-			.title {
-				display: flex;
-				align-items: center;
-				font-size: 16px;
-				//font-style: normal;
-				font-weight: 700;
-				.icon {
-					flex-shrink: 0;
-					margin-right: 6px;
-				}
-			}
 		}
 	}
 }

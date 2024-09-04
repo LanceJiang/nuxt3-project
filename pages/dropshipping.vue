@@ -205,7 +205,7 @@ const cardItems = [
 			left: px2vw(70px);
 			bottom: px2vw(72px);
 			width: px2vw(230px);
-			height: px2vw(60px);
+			height: px2vw(60px); // !important;
 			font-size: px2vw(20px);
 			padding: 0;
 			border-radius: px2vw(60px);
