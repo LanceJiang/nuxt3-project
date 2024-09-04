@@ -179,7 +179,7 @@ const nav_groups = [
 		items: [
 			{
 				label: 'contact us',
-				url: ''
+				url: '/contact'
 			},
 			{
 				label: 'user guide',

@@ -47,7 +47,7 @@
 						<el-button class="btn capitalize w-[245px]" type="primary" round>add products</el-button>
 						<el-button class="btn capitalize w-[245px]" round>watch tutorial</el-button>
 					</div>
-				</div>contact us
+				</div>
 			</div>
 
 			<img class="sign-bar w-full cursor-pointer mt-[60px]" src="@/assets/image/sign_bar_red.jpg" />
@@ -168,7 +168,7 @@ const platforms = [
 		color: #1b1b1b;
 	}
 	&-part1 {
-		padding: 100px 0;
+		padding: 100px 10px;
 
 		display: flex;
 		flex-direction: column;
