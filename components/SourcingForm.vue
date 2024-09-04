@@ -44,11 +44,12 @@ import { reactive, ref } from 'vue'
 import { Plus } from '@element-plus/icons-vue'
 import type { FormInstance, FormRules, UploadProps, UploadUserFile } from 'element-plus'
 const formRef = ref<FormInstance>()
+// todo...
 const params = reactive({
 	email: '',
 	name: '',
 	area: '',
-	fileList: [
+	fileList: undefined/*[
 		{
 			name: 'food.jpeg',
 			url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
@@ -57,7 +58,7 @@ const params = reactive({
 			name: 'plant-1.png',
 			url: '/images/plant-1.png',
 		}
-	],
+	],*/
 })
 const rules: FormRules = {
 	email: [

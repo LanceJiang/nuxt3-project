@@ -11,38 +11,36 @@
 				<el-button class="btn" type="primary" round>Start Now</el-button>
 			</header>
 
-			<div class="common-inner-auto">
-				<div class="common-inner-auto sourcing-part1">
-					<div class="item">
-						<img class="-mb-[20px]" src="@/assets/image/pod/services_1.jpg" />
-						<div class="desc-wrap">
-							<header class="part-title" style="text-align: left;">Source products from thousands of manufacturers</header>
-							<p class="mb-[40px]">
-								>>Seamless Integration with over 10 Major E-commerce Platforms in China <br/>
-								>>You can find thousands of factories, which allows you to directly talk with them to get more competitive quotes and more professional service.
-							</p>
-						</div>
+			<div class="common-inner-auto sourcing-part1">
+				<div class="item">
+					<img class="-mb-[20px]" src="@/assets/image/pod/services_1.jpg" />
+					<div class="desc-wrap">
+						<header class="part-title" style="text-align: left;">Source products from thousands of manufacturers</header>
+						<p class="mb-[40px]">
+							>>Seamless Integration with over 10 Major E-commerce Platforms in China <br/>
+							>>You can find thousands of factories, which allows you to directly talk with them to get more competitive quotes and more professional service.
+						</p>
 					</div>
+				</div>
 
-					<div class="item">
-						<img class="order-2" src="@/assets/image/pod/services_2.jpg" />
-						<div class="desc-wrap text-right">
-							<header class="part-title" style="text-align: right;">Vetted Suppliers</header>
-							<p class="mb-[40px] text-right">
-								>>We partner with thoroughly evaluated manufacturers to guarantee that every product meets the highest standards, without worrying the inventory shortage, giving you confidence in the excellence of your offerings.
-								>>Get the benefits of wholesale pricing even when ordering just one piece. This flexibility allows you to test products, manage inventory, and scale your brand without committing to large quantities.
-							</p>
-						</div>
+				<div class="item">
+					<img class="order-2" src="@/assets/image/pod/services_2.jpg" />
+					<div class="desc-wrap text-right">
+						<header class="part-title" style="text-align: right;">Vetted Suppliers</header>
+						<p class="mb-[40px] text-right">
+							>>We partner with thoroughly evaluated manufacturers to guarantee that every product meets the highest standards, without worrying the inventory shortage, giving you confidence in the excellence of your offerings.
+							>>Get the benefits of wholesale pricing even when ordering just one piece. This flexibility allows you to test products, manage inventory, and scale your brand without committing to large quantities.
+						</p>
 					</div>
+				</div>
 
-					<div class="item">
-						<img class="-mb-[20px]" src="@/assets/image/pod/services_1.jpg" />
-						<div class="desc-wrap">
-							<header class="part-title" style="text-align: left;">24-Hour Feedback</header>
-							<p class="mb-[40px]">
-								Experience rapid responses with 24-hour feedback to keep your sourcing process smooth and efficient, ensuring you stay on track with your brand’s needs.
-							</p>
-						</div>
+				<div class="item">
+					<img class="-mb-[20px]" src="@/assets/image/pod/services_1.jpg" />
+					<div class="desc-wrap">
+						<header class="part-title" style="text-align: left;">24-Hour Feedback</header>
+						<p class="mb-[40px]">
+							Experience rapid responses with 24-hour feedback to keep your sourcing process smooth and efficient, ensuring you stay on track with your brand’s needs.
+						</p>
 					</div>
 				</div>
 			</div>
