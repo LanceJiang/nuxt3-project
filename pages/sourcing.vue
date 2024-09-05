@@ -6,14 +6,14 @@
 		<svg_polygon_4 class="polygon_4"/>
 		<div class="local-container">
 			<header class="sourcing_header">
-				<div class="title">Kickstart Your Brand Journey Instantly</div>
-				<p class="desc">Effortless sourcing with quality products and unbeatable prices—your path to launching a successful ecommerce starts here.</p>
-				<el-button class="btn" type="primary" round>Start Now</el-button>
+<!--				<div class="title">Kickstart Your Brand Journey Instantly</div>
+				<p class="desc">Effortless sourcing with quality products and unbeatable prices—your path to launching a successful ecommerce starts here.</p>-->
+				<el-button class="btn" type="primary" round @click="scrollTo">Get Started</el-button>
 			</header>
 
 			<div class="common-inner-auto sourcing-part1">
 				<div class="item">
-					<img class="-mb-[20px]" src="@/assets/image/pod/services_1.jpg" />
+					<img class="-mb-[20px]" src="@/assets/image/sourcing/img_1.webp" />
 					<div class="desc-wrap">
 						<header class="part-title" style="text-align: left;">Source products from thousands of manufacturers</header>
 						<p class="mb-[40px]">
@@ -24,7 +24,7 @@
 				</div>
 
 				<div class="item">
-					<img class="order-2" src="@/assets/image/pod/services_2.jpg" />
+					<img class="order-2" src="@/assets/image/sourcing/img_2.webp" />
 					<div class="desc-wrap text-right">
 						<header class="part-title" style="text-align: right;">Vetted Suppliers</header>
 						<p class="mb-[40px] text-right">
@@ -35,7 +35,7 @@
 				</div>
 
 				<div class="item">
-					<img class="-mb-[20px]" src="@/assets/image/pod/services_1.jpg" />
+					<img class="-mb-[20px]" src="@/assets/image/sourcing/img_3.webp" />
 					<div class="desc-wrap">
 						<header class="part-title" style="text-align: left;">24-Hour Feedback</header>
 						<p class="mb-[40px]">
@@ -67,7 +67,7 @@
 					Tell us your sourcing request and we'll help you reach them
 				</div>
 				<div class="sourcing-part3">
-					<SourcingForm class="form-wrap" />
+					<SourcingForm class="form-wrap" ref="formRef" />
 					<img src="@/assets/image/sourcing/right-pic.png" class="right-pic" />
 				</div>
 			</div>
@@ -79,17 +79,18 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 import svg_polygon_1 from '@/assets/image/sourcing/polygon_1.svg'
 import svg_polygon_2 from '@/assets/image/sourcing/polygon_2.svg'
 import svg_polygon_3 from '@/assets/image/sourcing/polygon_3.svg'
 import svg_polygon_4 from '@/assets/image/sourcing/polygon_4.svg'
 
-import flex_1 from '@/assets/image/sourcing/flex_1.png'
-import flex_2 from '@/assets/image/sourcing/flex_2.png'
-import flex_3 from '@/assets/image/sourcing/flex_3.png'
-import flex_4 from '@/assets/image/sourcing/flex_4.png'
-import flex_5 from '@/assets/image/sourcing/flex_5.png'
-import flex_6 from '@/assets/image/sourcing/flex_6.png'
+import flex_1 from '@/assets/image/sourcing/flex_1.webp'
+import flex_2 from '@/assets/image/sourcing/flex_2.webp'
+import flex_3 from '@/assets/image/sourcing/flex_3.webp'
+import flex_4 from '@/assets/image/sourcing/flex_4.webp'
+import flex_5 from '@/assets/image/sourcing/flex_5.webp'
+import flex_6 from '@/assets/image/sourcing/flex_6.webp'
 const flexItems = [
 	{
 		pic: flex_1,
@@ -122,6 +123,10 @@ const flexItems = [
 		desc: 'Some buyers may find that ODM designs are close to what they need and only require minor adjustments before going to market. This saves on development costs and speeds up time to market.'
 	}
 ]
+const formRef = ref()
+const scrollTo = () => {
+	formRef.value.$el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 </script>
 
 <style scoped lang="scss">
@@ -129,11 +134,11 @@ const flexItems = [
 	&_header {
 		width: 100%;
 		height: px2vw(578px);
-		background: url('@/assets/image/sourcing/head_bg.png') no-repeat top center;
+		background: url('@/assets/image/sourcing/banner_1.webp') no-repeat top center;
 		background-size: 100% 100%;
-		padding-top: px2vw(123px);
-		padding-left: px2vw(334px);
-		.title {
+		padding-top: px2vw(388px);
+		padding-left: px2vw(85px);
+		/*.title {
 			font-size: px2vw(32px);
 			font-weight: 600;
 		}
@@ -142,11 +147,16 @@ const flexItems = [
 			font-size: px2vw(14px);
 			padding-top: px2vw(24px);
 			padding-bottom: px2vw(58px);
-		}
+		}*/
 		.btn {
-			width: px2vw(230px);
+			/*width: px2vw(230px);
 			height: px2vw(34px); // !important;
-			font-size: px2vw(14px);
+			font-size: px2vw(14px);*/
+			width: px2vw(190px);
+			height: px2vw(44px);
+			border-radius: px2vw(44px);
+			font-size: px2vw(20px);
+			//background: transparent;
 			padding: 0;
 		}
 	}
