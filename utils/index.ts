@@ -25,3 +25,7 @@ moment.updateLocale('zh-cn', {
 export const recommendDate = (timestamp: number | string) => {
 	return moment(Number(timestamp) * 1000).fromNow()
 }
+
+export const jumpUrl = (url: string, target = '_blank') => {
+	if (url) window.open(url, target)
+}
