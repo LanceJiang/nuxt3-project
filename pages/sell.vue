@@ -50,7 +50,7 @@
 				</div>
 			</div>
 
-			<img class="sign-bar w-full cursor-pointer mt-[60px]" src="@/assets/image/sign_bar_red.jpg" />
+			<SignUpBar class="sign-bar--red"/>
 			<Footer />
 		</div>
 	</div>

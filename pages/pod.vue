@@ -117,7 +117,7 @@
 				</div>
 			</div>
 		</div>
-		<img class="sign-bar cursor-pointer mt-[20px]" src="@/assets/image/sign_bar_green.jpg" />
+		<SignUpBar class="sign-bar--green"/>
 		<Footer />
 	</div>
 </template>

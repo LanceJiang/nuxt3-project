@@ -13,7 +13,7 @@
 				<img src="@/assets/image/contact/email-box.webp" alt="" />
 			</div>
 
-			<img class="sign-bar w-full cursor-pointer mt-[60px]" src="@/assets/image/sign_bar_blue.png" />
+			<SignUpBar class="sign-bar--blue"/>
 			<Footer />
 		</div>
 	</div>

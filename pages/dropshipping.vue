@@ -126,7 +126,7 @@
 				</div>
 			</div>
 
-			<img class="sign-bar w-full cursor-pointer mt-[60px]" src="@/assets/image/sign_bar_yellow.jpg" />
+			<SignUpBar class="sign-bar--yellow"/>
 			<Footer />
 		</div>
 	</div>

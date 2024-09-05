@@ -139,17 +139,18 @@ img {
 	position: relative;
 	width: 100%;
 	height: px2vw(128px);
+	margin-top: px2vw(60px);
 	background: url('@/assets/image/sign_bar_blue.png') no-repeat top center;
 	background-size: 100% 100%;
 	&--blue {}
 	&--green {
-		background-image: '@/assets/image/sign_bar_green.png';
+		background-image: url('@/assets/image/sign_bar_green.jpg');
 	}
 	&--red {
-		background-image: '@/assets/image/sign_bar_red.png';
+		background-image: url('@/assets/image/sign_bar_red.jpg');
 	}
 	&--yellow {
-		background-image: '@/assets/image/sign_bar_yellow.png';
+		background-image: url('@/assets/image/sign_bar_yellow.jpg');
 	}
 	.btn {
 		position: absolute;
