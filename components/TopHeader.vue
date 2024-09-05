@@ -8,7 +8,6 @@
 						class="main-nav"
 						mode="horizontal"
 						:ellipsis="false"
-						@select="handleSelect"
 					>
 						<el-menu-item class="nav-item logo"  @click="handleClickMenu({ path: '/' })">
 							<svg_logo />
@@ -30,12 +29,12 @@
 						</el-sub-menu>-->
 					</el-menu>
 					<div class="right-actions">
-						<el-button text>
+						<el-button text @click="localJump('login')">
 							<svg_SingnIn />
 							Sign In
 						</el-button>
-						<el-button round>
-							sign up for free
+						<el-button round @click="localJump('register')">
+							Sign Up For Free
 						</el-button>
 					</div>
 				</div>
@@ -51,6 +50,8 @@ import { useRoute, useRouter } from 'vue-router'
 import Cookies from 'js-cookie'
 import { Login } from '@/api/interface'
 import { login, setToken } from '@/api/user'
+import { jumpUrl } from '@/utils'
+
 import { GlobalStore } from '@/store'
 import svg_SingnIn from '@/assets/svg/SingnIn.svg'
 import svg_logo from '@/assets/logo.svg'
@@ -78,39 +79,8 @@ const menuList = [
 		path: '/sell',
 	},
 ]
-
-const setLanguage = (/*_locale*/) => {
-	console.error('修改lang',_locale)
-	locale.value = _locale.code
-}
-
-const changeLocale = (_locale) => {
-	console.error('修改lang',_locale)
-	locale.value = _locale
-}
-const log = (in8) => {
-	console.log(in8, 'log...')
-}
-
-const value = ref('')
-
-const options = [
-	{
-		value: 'Option1',
-		label: 'Option1',
-	},
-	{
-		value: 'Option2',
-		label: 'Option2',
-	}
-	]
-
-// 退出登录
-const logout = () => {
-	useGlobalStore.setUserInfo('')
-
-	// 刷新页面
-	router.go(0)
+const localJump = (action: 'login' | 'register') => {
+	jumpUrl(`https://seller.hyinsight.com/#/home?action=${action}`)
 }
 
 /* 切换亮色暗色模式逻辑代码 */
@@ -132,9 +102,6 @@ const changeThemePriamry = (val: string) => {
 }
 
 const activeMenu = computed(() => (route.meta?.activeMenu ? route.meta.activeMenu : route.path))
-const handleSelect = (key: string, keyPath: string[]) => {
-	console.log(key, keyPath)
-}
 const handleClickMenu = (nav: any) => {
 	router.push(nav.path)
 }

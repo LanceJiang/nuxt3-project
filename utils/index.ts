@@ -26,6 +26,11 @@ export const recommendDate = (timestamp: number | string) => {
 	return moment(Number(timestamp) * 1000).fromNow()
 }
 
+// 判断是否为小屏 同 theme.screens.max-m width
+export const isMobile = () => {
+	return window.innerWidth <= 750
+}
+
 export const jumpUrl = (url: string, target = '_blank') => {
 	if (url) window.open(url, target)
 }

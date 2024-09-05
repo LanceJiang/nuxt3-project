@@ -259,4 +259,13 @@ const nav_groups = [
 	text-transform: capitalize;
 	text-align: center;
 }
+// 兼容手机端
+.pro_mobile {
+	.main-footer {
+		.local_container {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+}
 </style>
