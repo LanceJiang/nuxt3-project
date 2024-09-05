@@ -8,10 +8,10 @@
 				Start Your Online Business with Ease Create and sell custom products with just one click.
 			</div>
 			<div class="mt-[16px] mb-[24px] text-center">
-				<el-button class="min-w-[230px]" type="primary" round>Start Selling</el-button>
+				<el-button class="min-w-[230px]" type="primary" round @click="localJump">Start Selling</el-button>
 			</div>
 		</div>
-		<img class="video-demo" src="~@/assets/image/pod/video_bg.jpg" />
+		<img class="video-demo" src="~@/assets/image/pod/banner.webp" />
 
 		<!--demand-->
 		<div class="common-inner-auto">
@@ -39,20 +39,20 @@
 			</div>
 			<div class="services-wrap mt-[30px]">
 				<div class="item">
-					<img src="@/assets/image/pod/services_1.jpg" />
+					<img src="@/assets/image/pod/services_1.webp" />
 					<div class="desc-wrap">
 						<header class="title">Creators and Designers</header>
 						<p class="mt-[16px] mb-[40px]">Start monetizing your audience or art with zero upfront investment. Selling custom merchandise is the best way to keep your creative passion alive.</p>
-						<el-button type="primary" round class="min-w-[230px]">Creat your merch</el-button>
+						<el-button type="primary" round class="min-w-[230px]" @click="localJump">Creat Your Merch</el-button>
 					</div>
 				</div>
 
 				<div class="item mt-[20px]">
-					<img class="order-2" src="@/assets/image/pod/services_2.jpg" />
+					<img class="order-2" src="@/assets/image/pod/services_2.webp" />
 					<div class="desc-wrap text-right">
 						<header class="title">Ecommerce Entrepreneurs</header>
 						<p class="mt-[16px] mb-[40px]">Build your brand without any upfront costs. Launching or growing your e-commerce business is now easier than ever with Hyinsight</p>
-						<el-button type="primary" round class="min-w-[230px]">Start Selling</el-button>
+						<el-button type="primary" round class="min-w-[230px]" @click="localJump">Start Selling</el-button>
 					</div>
 				</div>
 			</div>
@@ -63,9 +63,9 @@
 			<div class="part-title">
 				How Hyinsight empower your E-commerce growth
 			</div>
-			<div class="growth-wrap mt-[30px]">
+			<div class="growth-wrap -mt-[30px]">
 				<div class="item items-end">
-					<img class="transform translate-y-[30px]" src="@/assets/image/pod/growth_1.png" />
+					<img class="transform translate-y-[50px]" src="@/assets/image/pod/growth_1.webp" />
 					<div class="desc-wrap">
 						<header class="title"><svg_gift class="icon"/> Endless Product Selection – Create Your Signature Line</header>
 						<p class="mt-[12px]">
@@ -80,7 +80,7 @@
 				</div>
 
 				<div class="item items-start mt-[50px]">
-					<img class="order-2 transform -translate-y-[20px]" src="@/assets/image/pod/growth_2.png" />
+					<img class="order-2 transform -translate-y-[20px]" src="@/assets/image/pod/growth_2.webp" />
 					<div class="desc-wrap pl-48">
 						<header class="title justify-end"><svg_page class="icon"/>Extensive Design Templates – Design Made Easy</header>
 						<p class="mt-[12px] text-right">
@@ -91,7 +91,7 @@
 				</div>
 
 				<div class="item items-start mt-[20px]">
-					<img class="transform -translate-y-[60px]" src="@/assets/image/pod/growth_3.png" />
+					<img class="transform -translate-y-[60px]" src="@/assets/image/pod/growth_3.webp" />
 					<div class="desc-wrap">
 						<header class="title"><svg_airplane class="icon"/>48 Hours Lightning-Fast Shipping – Start Selling in No Time</header>
 						<p class="mt-[12px]">
@@ -105,8 +105,8 @@
 					</div>
 				</div>
 
-				<div class="item items-start pt-[20px] -mt-[46px]">
-					<img class="order-2 transform -translate-y-[20px]" src="@/assets/image/pod/growth_4.png" />
+				<div class="item items-start pt-[20px] -mt-[46px] -mb-[30px]">
+					<img class="order-2 transform -translate-y-[20px]" src="@/assets/image/pod/growth_4.webp" />
 					<div class="desc-wrap pl-48">
 						<header class="title justify-end"><svg_globe class="icon"/>Flexible Options, Exceptional Service</header>
 						<p class="mt-[12px] text-right">
@@ -128,9 +128,10 @@ import svg_page from '@/assets/svg/page.svg'
 import svg_airplane from '@/assets/svg/airplane.svg'
 import svg_globe from '@/assets/svg/globe.svg'
 
-import img_ladder_1 from '@/assets/image/pod/ladder_1.png'
-import img_ladder_2 from '@/assets/image/pod/ladder_2.png'
-import img_ladder_3 from '@/assets/image/pod/ladder_3.png'
+import img_ladder_1 from '@/assets/image/pod/ladder_1.webp'
+import img_ladder_2 from '@/assets/image/pod/ladder_2.webp'
+import img_ladder_3 from '@/assets/image/pod/ladder_3.webp'
+import { jumpUrl } from '@/utils'
 // import img_ladder_1 from '@/assets/image/pod/ladder_1.jpg'
 const ladders = [
 	{
@@ -156,13 +157,14 @@ const ladders = [
 		]
 	}
 ]
+const localJump = () => jumpUrl('https://seller.hyinsight.com/#/home/searchResults?categoryId=1765257893646475285&categoryName=Pod%20Dropshipping')
 </script>
 
 <style scoped lang="scss">
 .pod-wrap {
 	.video-demo {
 		width: 100%;
-		cursor: pointer;
+		//cursor: pointer;
 	}
 	// 阶梯
 	.ladder {
@@ -174,6 +176,7 @@ const ladders = [
 			}
 			.desc {
 				font-size: 16px;
+				max-width: 570px;
 				& + .desc {
 					margin-top: 20px;
 				}
