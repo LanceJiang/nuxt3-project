@@ -3,7 +3,7 @@
 		<div class="local-container">
 			<el-carousel class="home_header">
 				<el-carousel-item class="banner banner_1">
-					<el-button class="btn" type="primary" @click="jumpUrl('https://seller.hyinsight.com/#/home?action=login')">Get Started</el-button>
+					<el-button class="btn" type="primary" @click="goLogin">Get Started</el-button>
 				</el-carousel-item>
 				<el-carousel-item class="banner banner_2">
 					<el-button class="btn" type="primary" @click="jumpUrl('https://seller.hyinsight.com/#/home/searchResults?categoryId=1726425774407069798&categoryName=Consumer%20Electronics')">Get Started</el-button>
@@ -36,7 +36,7 @@
 						<svg_logo_txt class="logo-txt logo-top" />
 						<div class="desc">Works with:</div>
 						<div class="platform" />
-						<el-button class="btn" type="primary" round>try it for free</el-button>
+						<el-button class="btn" type="primary" @click="goRegister" round>try it for free</el-button>
 						<div class="icon-desc">
 							<svg_rate_gear class="icon icon_2"/>
 							design & sourcing
@@ -62,7 +62,9 @@
 				</div>
 			</div>
 
-			<img class="sign-bar w-full cursor-pointer mt-[60px]" src="@/assets/image/sign_bar_blue.png" />
+			<div class="sign-bar">
+				<el-button class="btn" @click="goRegister">sign up-it’s free</el-button>
+			</div>
 			<Footer />
 		</div>
 	</div>
@@ -92,6 +94,12 @@ const imgItems = [
 ]
 const jumpUrl = (url: string) => {
 	if (url) window.open(url, '_blank')
+}
+const  goLogin = () => {
+	jumpUrl('https://seller.hyinsight.com/#/home?action=login')
+}
+const goRegister = () => {
+	jumpUrl('https://seller.hyinsight.com/#/home?action=register')
 }
 </script>
 
@@ -161,12 +169,18 @@ const jumpUrl = (url: string) => {
 	}
 	&-part1 {
 		.icon-desc {
+			position: relative;
+			z-index: 3;
 			display: flex;
 			align-items: center;
 			color: #212121;
 			font-size: px2vw(16px);
 			font-weight: 600;
 			text-transform: capitalize;
+			cursor: pointer;
+			&:hover {
+				color: #375AE5;
+			}
 			.icon {
 				margin-right: px2vw(6px);
 				font-size: px2vw(24px);
