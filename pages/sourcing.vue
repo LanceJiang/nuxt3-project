@@ -204,9 +204,9 @@ const scrollTo = () => {
 			gap: 40px;
 			img {
 				//width: 486px;
-				flex-shrink: 0; // todo...
-				width: 258px;
-				height: 378px;
+				flex-shrink: 0;
+				//width: 258px;
+				//height: 378px;
 				//border-radius: 8px;
 			}
 			.title {

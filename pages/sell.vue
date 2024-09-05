@@ -4,7 +4,7 @@
 			<header class="sell_header">
 <!--				<div class="title">Kickstart Your Brand Journey Instantly</div>-->
 <!--				<p class="desc">Effortless sourcing with quality products and unbeatable prices—your path to launching a successful ecommerce starts here.</p>-->
-				<el-button class="btn" type="primary" round>Open Your Shop Now</el-button>
+				<el-button class="btn" type="primary" @click="localJump">Connect your store now</el-button>
 			</header>
 			<div class="platform-wrap">
 				<div class="platform common-inner-auto">
@@ -14,38 +14,38 @@
 
 			<div class="common-inner-auto sell-part1">
 				<div class="item">
-					<img class="" src="@/assets/image/pod/services_1.jpg" />
+					<img class="" src="@/assets/image/sell/card_1.webp" />
 					<div class="desc-wrap">
 						<header class="part-title" style="text-align: left;">How to Integrate with Shopify</header>
-						<el-button class="btn capitalize w-[245px]" type="primary" round>connect to Shopify</el-button>
+						<el-button class="btn capitalize w-[245px]" type="primary" round  @click="localJump">connect to Shopify</el-button>
 						<el-button class="btn capitalize w-[245px]" round>watch tutorial</el-button>
 					</div>
 				</div>
 
 				<div class="item">
-					<img class="order-2" src="@/assets/image/pod/services_2.jpg" />
+					<img class="order-2" src="@/assets/image/sell/card_2.webp" />
 					<div class="desc-wrap items-end">
 						<header class="part-title" style="text-align: right;">How to Integrate with Tiktok Shop</header>
-						<el-button class="btn capitalize w-[245px]" type="primary" round>connect to tikTok shop</el-button>
-						<el-button class="btn capitalize w-[245px]" round>watch tutorial</el-button>
+						<el-button class="btn capitalize w-[245px]" type="primary" round @click="localJump">connect to tikTok shop</el-button>
+						<el-button class="btn capitalize w-[245px]" round @click="testClick">watch tutorial</el-button>
 					</div>
 				</div>
 
 				<div class="item">
-					<img class="" src="@/assets/image/pod/services_1.jpg" />
+					<img class="" src="@/assets/image/sell/card_3.webp" />
 					<div class="desc-wrap">
 						<header class="part-title" style="text-align: left;">How to Integrate with WooCommerce</header>
-						<el-button class="btn capitalize w-[245px]" type="primary" round>connect to woocommerce</el-button>
-						<el-button class="btn capitalize w-[245px]" round>watch tutorial</el-button>
+						<el-button class="btn capitalize w-[245px]" type="primary" round @click="localJump">connect to woocommerce</el-button>
+						<el-button class="btn capitalize w-[245px]" round @click="testClick">watch tutorial</el-button>
 					</div>
 				</div>
 
 				<div class="item">
-					<img class="order-2" src="@/assets/image/pod/services_2.jpg" />
+					<img class="order-2" src="@/assets/image/sell/card_4.webp" />
 					<div class="desc-wrap items-end">
 						<header class="part-title" style="text-align: right;">How to Integrate with your own store</header>
 						<el-button class="btn capitalize w-[245px]" type="primary" round>add products</el-button>
-						<el-button class="btn capitalize w-[245px]" round>watch tutorial</el-button>
+						<el-button class="btn capitalize w-[245px]" round @click="testClick">watch tutorial</el-button>
 					</div>
 				</div>
 			</div>
@@ -61,6 +61,7 @@ import svg_p1 from '@/assets/image/sell/shopify.svg'
 import svg_p2 from '@/assets/image/sell/tiktok.svg'
 import svg_p3 from '@/assets/image/sell/woo.svg'
 import svg_p4 from '@/assets/image/sell/others.svg'
+import { jumpUrl } from '@/utils'
 
 // import flex_1 from '@/assets/image/sourcing/flex_1.png'
 //
@@ -79,6 +80,10 @@ const platforms = [
 	svg_p4
 ]
 
+const localJump = () => jumpUrl('https://seller.hyinsight.com/#/diSpuPublish/index')
+const testClick = () => {
+	console.error('todo....')
+}
 </script>
 
 <style scoped lang="scss">
@@ -87,7 +92,7 @@ const platforms = [
 		position: relative;
 		width: 100%;
 		height: px2vw(578px);
-		background: url('@/assets/image/sell/head_bg.webp') no-repeat top center rgba(255, 229, 212, 0.1);
+		background: url('@/assets/image/sell/banner.webp') no-repeat top center;
 		background-size: 100% 100%;
 		//background-color: rgba(255, 229, 212, 0.1);
 		//padding-top: px2vw(123px);
@@ -104,13 +109,14 @@ const platforms = [
 		}*/
 		.btn {
 			position: absolute;
-			left: px2vw(60px);
-			bottom: px2vw(142px);
-			width: px2vw(256px);
-			height: px2vw(60px); // !important;
-			border-radius: px2vw(60px);
-			font-size: px2vw(14px);
+			left: px2vw(85px);
+			bottom: px2vw(259px);
+			width: px2vw(294px);
+			height: px2vw(44px);
+			border-radius: px2vw(44px);
+			font-size: px2vw(20px);
 			padding: 0;
+			//background: transparent;
 		}
 	}
 	&-wrap {
@@ -150,9 +156,9 @@ const platforms = [
 			//align-items: center;
 			gap: 60px;
 			img {
-				flex-shrink: 0; // todo...
-				width: 672px;
-				height: 366px;
+				flex-shrink: 0;
+				//width: 672px;
+				//height: 366px;
 				border-radius: 8px;
 			}
 			.part-title {
