@@ -1,7 +1,7 @@
 <template>
 	<div class="home-wrap column-page-wrap bg-white">
 		<div class="local-container">
-			<el-carousel class="home_header">
+			<el-carousel class="home_header" height="100%">
 				<el-carousel-item class="banner banner_1">
 					<el-button class="btn" type="primary" @click="goLogin">Get Started</el-button>
 				</el-carousel-item>
@@ -62,15 +62,14 @@
 				</div>
 			</div>
 
-			<div class="sign-bar">
-				<el-button class="btn" @click="goRegister">sign up-it’s free</el-button>
-			</div>
+			<SignUpBar class="sign-bar--blue"/>
 			<Footer />
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
+import { jumpUrl } from '@/utils/index'
 import svg_logo_txt from '@/assets/image/home/logo_txt.svg'
 import svg_rate_gear from '@/assets/svg/rate_gear.svg'
 
@@ -92,9 +91,7 @@ const imgItems = [
 	img_7,
 	img_8
 ]
-const jumpUrl = (url: string) => {
-	if (url) window.open(url, '_blank')
-}
+
 const  goLogin = () => {
 	jumpUrl('https://seller.hyinsight.com/#/home?action=login')
 }
@@ -109,10 +106,12 @@ const goRegister = () => {
 		position: relative;
 		width: 100%;
 		height: px2vw(578px);
-		:deep(.el-carousel__container) {
+		/*:deep(.el-carousel__container) {
 			height: 100%;
-		}
+		}*/
 		.banner {
+			background: url('@/assets/image/home/banner_1.webp') no-repeat top center;
+			background-size: 100% 100%;
 			height: 100%;
 			&_1 {
 				background-image: url('@/assets/image/home/banner_1.webp');
