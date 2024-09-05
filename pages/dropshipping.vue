@@ -4,12 +4,12 @@
 			<header class="dropshipping_header">
 <!--				<div class="title">Kickstart Your Brand Journey Instantly</div>
 				<p class="desc">Effortless dropshipping with quality products and unbeatable prices—your path to launching a successful ecommerce starts here.</p>-->
-				<el-button class="btn" type="primary" round>Start Now</el-button>
+				<el-button class="btn" @click="goLogin">Start Now</el-button>
 			</header>
 
 			<div class="common-inner-auto dropshipping-part1">
-				<div class="item pr-[80px]">
-					<img class="order-2" src="@/assets/image/dropshipping/part1_1.png" />
+				<div class="item pr-[18px]">
+					<img class="order-2" src="@/assets/image/dropshipping/part1_1.webp" />
 					<div class="desc-wrap">
 						<header class="part-title transform translate-x-[140px]" style="text-align: right;">The Hidden Challenges of Dropshipping</header>
 						<div class="desc-box">
@@ -55,8 +55,8 @@
 					</div>
 				</div>
 
-				<div class="item pl-[80px]">
-					<img src="@/assets/image/dropshipping/part1_2.png" />
+				<div class="item pl-[18px]">
+					<img src="@/assets/image/dropshipping/part1_2.webp" />
 					<div class="desc-wrap">
 						<header class="part-title transform -translate-x-[140px]" style="text-align: left;">How Hyinsight Enhances Your Efficiency</header>
 						<div class="desc-box">
@@ -144,6 +144,7 @@ import card_5 from '@/assets/image/dropshipping/card_5.webp'
 import card_6 from '@/assets/image/dropshipping/card_6.webp'
 import card_7 from '@/assets/image/dropshipping/card_7.webp'
 import card_8 from '@/assets/image/dropshipping/card_8.webp'
+import { jumpUrl } from '@/utils'
 const cardItems = [
 	{
 		pic: card_1,
@@ -178,6 +179,9 @@ const cardItems = [
 		// desc: ''
 	}
 ]
+const  goLogin = () => {
+	jumpUrl('https://seller.hyinsight.com/#/home?action=login')
+}
 </script>
 
 <style scoped lang="scss">
@@ -186,7 +190,7 @@ const cardItems = [
 		position: relative;
 		width: 100%;
 		height: px2vw(578px);
-		background: url('@/assets/image/dropshipping/head_bg.jpg') no-repeat top center;
+		background: url('@/assets/image/dropshipping/banner.webp') no-repeat top center;
 		background-size: 100% 100%;
 		//padding-top: px2vw(123px);
 		//padding-left: px2vw(334px);
@@ -202,13 +206,16 @@ const cardItems = [
 		}*/
 		.btn {
 			position: absolute;
-			left: px2vw(70px);
-			bottom: px2vw(72px);
-			width: px2vw(230px);
-			height: px2vw(60px); // !important;
-			font-size: px2vw(20px);
+			left: px2vw(448px);
+			bottom: px2vw(164px);
 			padding: 0;
-			border-radius: px2vw(60px);
+			width: px2vw(190px);
+			height: px2vw(44px);
+			border-radius: px2vw(44px);
+			font-size: px2vw(18px);
+			//background: transparent;
+			color: #3E59BB;
+			border-color: #3E59BB;
 		}
 	}
 	&-wrap {
