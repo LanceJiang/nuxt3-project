@@ -10,7 +10,7 @@
 				</el-carousel-item>
 			</el-carousel>
 
-			<div class="common-inner-auto home-part1">
+			<div class="home-part1">
 				<div class="part-title">
 					Lunch Your Business in 4 Easy Steps
 				</div>
