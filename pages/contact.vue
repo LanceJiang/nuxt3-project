@@ -2,11 +2,11 @@
 	<div class="contact-wrap column-page-wrap bg-white">
 		<div class="local-container">
 			<header class="contact_header">
-				<div class="title">Customer support</div>
+<!--				<div class="title">Customer support</div>
 				<p class="desc">
 					If you have any questions about Hyinsight- from creating an account to using the Hyinsight to tracking an order, check out our Help Center You'll find answers to our most frequently asked questions here.<br/>
 					If you can't find what you're looking for in the Help Center, don't hesitate to contact us via chat or email.
-				</p>
+				</p>-->
 				<el-button class="btn" type="primary">Help Center</el-button>
 			</header>
 			<div class="box-wrap">
@@ -34,12 +34,10 @@ const platforms = [
 		position: relative;
 		width: 100%;
 		height: px2vw(578px);
-		background: url('@/assets/image/contact/bg.webp') no-repeat top right #E6FFF7;
-		background-size: contain;
+		background: url('@/assets/image/contact/banner.webp') no-repeat top center #A6D7FF;
+		background-size: 100% 100%;
 		//background-color: rgba(255, 229, 212, 0.1);
-		padding-top: px2vw(90px);
-		padding-left: px2vw(60px);
-		.title {
+		/*.title {
 			font-size: px2vw(32px);
 			font-weight: 600;
 		}
@@ -49,18 +47,23 @@ const platforms = [
 			line-height: px2vw(24px);
 			padding-top: px2vw(34px);
 			padding-bottom: px2vw(120px);
-		}
+		}*/
 		.btn {
-			//position: absolute;
+			position: absolute;
+			top: px2vw(402px);
+			left: px2vw(134px);
 			//left: px2vw(60px);
 			//bottom: px2vw(142px);
-			--el-button-hover-border-color: #005B80;
-			width: px2vw(256px);
-			height: px2vw(60px); // !important;
+			--el-button-hover-border-color: #4867E7;
+			//width: px2vw(256px);
+			width: px2vw(190px);
+			height: px2vw(44px);
+			border-radius: px2vw(44px);
 			//border-radius: px2vw(60px);
 			font-size: px2vw(20px);
 			padding: 0;
-			background: #005B80;
+			background: #4867E7;
+			//background: transparent;
 		}
 	}
 	&-wrap {
