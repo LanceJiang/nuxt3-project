@@ -4,7 +4,7 @@
 			<div class="icons-wrap">
 				<svg-icon name="logo" class="text-[58px]" style="height: 44px" />
 				<div class="icon-list">
-					<svg-icon v-for="icon of logo_links" :name="icon.icon" class="icon" @click="jumpUrl(icon.url)"></svg-icon>
+					<svg-icon v-for="icon of logo_links" :name="icon.icon" :class="['icon', icon.url ? 'link' : '']" @click="jumpUrl(icon.url)"></svg-icon>
 				</div>
 			</div>
 			<div class="links-wrap" v-for="(group, i) of nav_groups" :key="i">
@@ -34,38 +34,38 @@ const logo_links = [
 	{
 		// svg: svg_facebook,
 		icon: 'facebook',
-		url: ''
+		url: 'https://www.facebook.com/profile.php?id=61562790691146'
 	},
-	{
+	/*{
 		// svg: svg_tiktok,
 		icon: 'tiktok',
 		url: ''
-	},
-	{
+	},*/
+	/*{
 		// svg: svg_in,
 		icon: 'in',
 		url: ''
-	},
+	},*/
 	{
 		// svg: svg_youtube,
 		icon: 'youtube',
-		url: ''
+		url: 'https://www.youtube.com/@Hyinsight-official'
 	},
-	{
+	/*{
 		// svg: svg_robot,
 		icon: 'robot',
 		url: ''
-	},
+	},*/
 	{
 		// svg: svg_camera,
 		icon: 'camera',
-		url: ''
-	},
+		url: 'https://www.instagram.com/hyinsight/'
+	}/*,
 	{
 		// svg: svg_x,
 		icon: 'x',
 		url: ''
-	}
+	}*/
 ]
 const nav_groups = [
 	// integrations
@@ -145,7 +145,7 @@ const nav_groups = [
 		]
 	},
 	// company
-	{
+	/*{
 		title: 'Company',
 		items: [
 			{
@@ -173,7 +173,7 @@ const nav_groups = [
 				url: ''
 			}
 		]
-	},
+	},*/
 	// help center
 	{
 		title: 'help center',
@@ -184,7 +184,7 @@ const nav_groups = [
 			},
 			{
 				label: 'user guide',
-				url: ''
+				url: 'https://seller.hyinsight.com/#/helpCenter'
 			}
 		]
 	}
@@ -225,7 +225,7 @@ const nav_groups = [
 			cursor: pointer;
 			font-size: 24px;
 			color: #2C3E50;
-			&:hover {
+			&.link:hover {
 				color: var(--link-color);
 			}
 		}

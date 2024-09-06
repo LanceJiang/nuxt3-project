@@ -53,14 +53,14 @@
 					<!--<div class="desc-wrap"></div>-->
 				</div>
 			</div>
-			<div class="home-part3">
+<!--			<div class="home-part3">
 				<div class="part-title">
 					Read their story
 				</div>
 				<div class="common-inner-auto box-wrap">
 					<img v-for="(url, i) of imgItems" :src="url" class="img" />
 				</div>
-			</div>
+			</div>-->
 
 			<SignUpBar class="sign-bar--blue"/>
 			<Footer />
