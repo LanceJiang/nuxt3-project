@@ -10,7 +10,7 @@
 			<div class="links-wrap" v-for="(group, i) of nav_groups" :key="i">
 				<header class="title">{{group.title}}</header>
 				<div class="item">
-					<a class="link" v-for="link of group.items" :href="link.url" target="_blank">{{ link.label }}</a>
+					<span :class="[link.url ? 'link' : '']" v-for="link of group.items" @click="jumpUrl(link.url)">{{ link.label }}</span>
 				</div>
 			</div>
 		</div>
@@ -21,6 +21,8 @@
 </template>
 
 <script lang="ts" setup>
+import { jumpUrl } from '@/utils'
+
 import svg_logo from '@/assets/logo.svg'
 import svg_facebook from '@/assets/svg/facebook.svg'
 import svg_tiktok from '@/assets/svg/tiktok.svg'
@@ -63,9 +65,6 @@ const logo_links = [
 		url: ''
 	}
 ]
-const jumpUrl = (url: string) => {
-	if (url) window.open(url, '_blank')
-}
 const nav_groups = [
 	// integrations
 	{
@@ -241,7 +240,8 @@ const nav_groups = [
 			flex-direction: column;
 			justify-content: flex-start;
 			gap: 12px;
-			a {
+			.link {
+				cursor: pointer;
 				text-transform: capitalize;
 				color: var(--primary-color);
 				text-decoration: unset;
