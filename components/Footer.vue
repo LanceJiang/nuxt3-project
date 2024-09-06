@@ -2,9 +2,9 @@
 	<footer class="main-footer">
 		<div class="local_container">
 			<div class="icons-wrap">
-				<svg_logo class="w-[82px]" />
+				<svg-icon name="logo" class="text-[58px]" style="height: 44px" />
 				<div class="icon-list">
-					<component v-for="icon of logo_links" :is="icon.svg" class="icon" @click="jumpUrl(icon.url)"></component>
+					<svg-icon v-for="icon of logo_links" :name="icon.icon" class="icon" @click="jumpUrl(icon.url)"></svg-icon>
 				</div>
 			</div>
 			<div class="links-wrap" v-for="(group, i) of nav_groups" :key="i">
@@ -23,45 +23,47 @@
 <script lang="ts" setup>
 import { jumpUrl } from '@/utils'
 
-import svg_logo from '@/assets/logo.svg'
-import svg_facebook from '@/assets/svg/facebook.svg'
-import svg_tiktok from '@/assets/svg/tiktok.svg'
-import svg_in from '@/assets/svg/in.svg'
-import svg_youtube from '@/assets/svg/youtube.svg'
-import svg_robot from '@/assets/svg/robot.svg'
-import svg_camera from '@/assets/svg/camera.svg'
-import svg_x from '@/assets/svg/x.svg'
-
-import { ref, reactive, computed } from 'vue'
-import { Close, InfoFilled } from '@element-plus/icons-vue'
-import { useRouter } from 'vue-router'
+// import svg_facebook from '@/assets/svg/facebook.svg'
+// import svg_tiktok from '@/assets/svg/tiktok.svg'
+// import svg_in from '@/assets/svg/in.svg'
+// import svg_youtube from '@/assets/svg/youtube.svg'
+// import svg_robot from '@/assets/svg/robot.svg'
+// import svg_camera from '@/assets/svg/camera.svg'
+// import svg_x from '@/assets/svg/x.svg'
 const logo_links = [
 	{
-		svg: svg_facebook,
+		// svg: svg_facebook,
+		icon: 'facebook',
 		url: ''
 	},
 	{
-		svg: svg_tiktok,
+		// svg: svg_tiktok,
+		icon: 'tiktok',
 		url: ''
 	},
 	{
-		svg: svg_in,
+		// svg: svg_in,
+		icon: 'in',
 		url: ''
 	},
 	{
-		svg: svg_youtube,
+		// svg: svg_youtube,
+		icon: 'youtube',
 		url: ''
 	},
 	{
-		svg: svg_robot,
+		// svg: svg_robot,
+		icon: 'robot',
 		url: ''
 	},
 	{
-		svg: svg_camera,
+		// svg: svg_camera,
+		icon: 'camera',
 		url: ''
 	},
 	{
-		svg: svg_x,
+		// svg: svg_x,
+		icon: 'x',
 		url: ''
 	}
 ]
@@ -221,7 +223,7 @@ const nav_groups = [
 		margin-top: 30px;
 		.icon {
 			cursor: pointer;
-			width: 24px;
+			font-size: 24px;
 			color: #2C3E50;
 			&:hover {
 				color: var(--link-color);

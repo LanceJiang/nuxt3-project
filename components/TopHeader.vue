@@ -54,7 +54,7 @@ import { jumpUrl } from '@/utils'
 
 import { GlobalStore } from '@/store'
 import svg_SingnIn from '@/assets/svg/SingnIn.svg'
-import svg_logo from '@/assets/logo.svg'
+import svg_logo from '@/assets/svg/logo.svg'
 
 import { useI18n } from 'vue-i18n'
 const route = useRoute()

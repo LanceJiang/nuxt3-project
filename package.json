@@ -29,6 +29,7 @@
 		"nuxt": "3.6.5",
 		"prettier": "^2.7.1",
 		"sass": "^1.56.1",
+		"vite-plugin-svg-icons": "^2.0.1",
 		"vite-svg-loader": "^5.1.0"
 	},
 	"dependencies": {

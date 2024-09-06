@@ -1,6 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 import { resolve } from 'pathe'
 import { loadEnv } from 'vite'
+import path from 'path'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import svgLoader from 'vite-svg-loader'
 export default defineNuxtConfig({
 	devtools: { enabled: true },
@@ -44,7 +46,12 @@ export default defineNuxtConfig({
 			},
 		},
 		plugins: [
-			svgLoader()
+			svgLoader(),
+			createSvgIconsPlugin({
+				iconDirs: [path.resolve(process.cwd(), 'assets/svg')],
+				// svgoOptions: isBuild,
+				symbolId: 'icon-[dir]-[name]'
+			})
 		]
 	},
 	css: [/*'element-plus/dist/index.css', */'assets/styles/index.scss', 'assets/styles/juejin.css'],
