@@ -74,23 +74,23 @@ const nav_groups = [
 		items: [
 			{
 				label: 'Shopify',
-				url: ''
+				url: '/sell'
 			},
 			{
 				label: 'TikTok Shop',
-				url: ''
+				url: '/sell'
 			},
 			{
 				label: 'WooCommerce',
-				url: ''
+				url: '/sell'
 			},
 			{
 				label: 'Create your storefront on',
-				url: ''
+				url: '/sell'
 			},
 			{
 				label: 'Hyinsight',
-				url: ''
+				url: '/sell'
 			}
 		]
 	},
