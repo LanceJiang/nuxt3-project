@@ -267,5 +267,10 @@ const nav_groups = [
 			gap: 20px;
 		}
 	}
+	.copy-right {
+		//padding: 0 10px;
+		line-height: px2vw(120px);
+		font-size: px2vw(28px);
+	}
 }
 </style>

@@ -168,3 +168,10 @@ img {
 		text-transform: capitalize;
 	}
 }
+
+// 兼容手机端
+.pro_mobile {
+	.part-title {
+		font-size: px2vw(62px);
+	}
+}
