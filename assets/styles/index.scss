@@ -75,8 +75,10 @@ img {
 .common-inner-auto {
 	margin: 0 auto;
 	//width: 1320px;
-	max-width: 1340px; // 1320 + 2*10
+	max-width: 1340px;
 	padding: 0 10px;
+	//max-width: px2vw(1340px);
+	//padding: 0 px2vw(10px);
 }
 // 超出隐藏样式1
 .text-ellipsis {

@@ -132,12 +132,11 @@ const scrollTo = () => {
 <style scoped lang="scss">
 .sourcing {
 	&_header {
+		position: relative;
 		width: 100%;
 		height: px2vw(578px);
 		background: url('@/assets/image/sourcing/banner_1.webp') no-repeat top center;
 		background-size: 100% 100%;
-		padding-top: px2vw(388px);
-		padding-left: px2vw(85px);
 		/*.title {
 			font-size: px2vw(32px);
 			font-weight: 600;
@@ -152,6 +151,9 @@ const scrollTo = () => {
 			/*width: px2vw(230px);
 			height: px2vw(34px); // !important;
 			font-size: px2vw(14px);*/
+			position: absolute;
+			top: px2vw(388px);
+			left: px2vw(85px);
 			width: px2vw(190px);
 			height: px2vw(44px);
 			border-radius: px2vw(44px);
