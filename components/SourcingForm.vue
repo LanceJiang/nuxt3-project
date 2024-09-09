@@ -51,7 +51,7 @@ import { Plus } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import type { FormInstance, FormRules, UploadProps, UploadUserFile } from 'element-plus'
 import { queryOpInfo, getRecommendAll1 } from '@/api/sourcing'
-const VITE_UPLOAD_URL = 'https://jjz.feasyshopping.com/admin-api/infra/file/upload' // todo  .env.xxx
+const VITE_UPLOAD_URL = 'https://bdapi.hyinsight.com/admin-api/infra/file/upload' // todo  .env.xxx
 
 const { data, error, pending, execute } = useFetch('https://bdapi.hyinsight.com/admin-api/system/config-currency/page', {
 	method: 'get',

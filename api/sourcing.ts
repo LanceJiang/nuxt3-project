@@ -1,6 +1,6 @@
 import Http from '../utils/request'
 import { Login } from './interface' // todo...
-// const VITE_API_URL = 'https://jjz.feasyshopping.com/admin-api'
+// const VITE_API_URL = 'https://bdapi.hyinsight.com/admin-api'
 export const getRecommend = () => {
 	return Http.get('/article/list')
 }
@@ -38,6 +38,6 @@ export const queryOpInfo = (body: any): Promise<any> => {
 	return $fetch('/distributor/op-info/create', {
 		method: 'post',
 		body,
-		baseURL: 'https://jjz.feasyshopping.com/admin-api' // todo  .env.xxx
+		baseURL: 'https://bdapi.hyinsight.com/admin-api' // todo  .env.xxx
 	})
 }
