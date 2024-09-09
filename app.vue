@@ -27,9 +27,15 @@ const updateElDeviceClass = () => {
 	const isMobile = useGlobalStore.isMobile
 	// nextTick(() => {
 	// console.error(appRef.value.classList, 'appRef.value.classList')
+	// 更新
 	appRef.value?.classList.remove(isMobile ? 'pro_pc' : 'pro_mobile')
 	appRef.value?.classList.add(isMobile ? 'pro_mobile' : 'pro_pc')
 	// })
+
+	const themeClass = themeConfig.value
+	// 更新主题
+	appRef.value?.classList.remove(themeClass === 'light' ? 'dark' : 'light')
+	appRef.value?.classList.add(themeClass === 'light' ? 'light' : 'dark')
 }
 watch(() => useGlobalStore.isMobile, () => {
 	// console.log(isMobile, 'watch useGlobalStore.isMobile')
