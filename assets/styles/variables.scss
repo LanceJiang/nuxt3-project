@@ -44,7 +44,14 @@ $topHeader: 90px;
 	@return decimalRound(math.div($px, $rootValue), 3) * 1rem;
 }
 
+// pc端兼容
 $design-width: 1440px;
 @function px2vw($px) {
 	@return math.div($px, $design-width) * 100vw;
+}
+
+// 手机端兼容
+$mobile-width: 375px;
+@function mx2vw($px) {
+	@return math.div($px, $mobile-width) * 100vw;
 }
