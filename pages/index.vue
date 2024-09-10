@@ -161,6 +161,7 @@ const goRegister = () => {
 	}
 	&-wrap {
 		position: relative;
+		overflow-x: hidden;
 		//color: #262626;
 		.local-container {
 			position: relative;
@@ -217,6 +218,8 @@ const goRegister = () => {
 		.box-wrap {
 			position: relative;
 			height: px2vw(1255px);
+			width: px2vw(1320px);
+			margin: 0 auto;
 			/*margin: px2vw(280px) auto px2vw(226px);
 			//margin-top: px2vw(280px);
 			//margin-bottom: px2vw(226px);
@@ -231,12 +234,12 @@ const goRegister = () => {
 				background: url('@/assets/image/home/order_1.webp') no-repeat top center;
 				background-size: 100% 100%;
 				&_1 {
-					top: px2vw(80px);
-					left: 0;
+					top: px2vw(150px);
+					left: px2vw(-20px);
 				}
 				&_2 {
-					right: 0;
-					top: px2vw(393px);
+					right: px2vw(-10px);
+					top: px2vw(450px);
 					background-image: url('@/assets/image/home/order_2.webp');
 				}
 				&_3 {
@@ -322,11 +325,14 @@ const goRegister = () => {
 	&-part2 {
 		.box-wrap {
 			position: relative;
-			width: 100%;
-			height: px2vw(578px);
+			margin: 0 auto;
+			margin-bottom: px2vw(-1px);
+			//width: 100%;
+			width: px2vw(1320px);
+			//height: px2vw(578px);
+			height: px2vw(529.83px);
 			background: url('@/assets/image/home/warehouse.webp') no-repeat top center /*rgba(104, 118, 183, 0.9)*/;
 			background-size: 100% 100%;
-			margin-bottom: px2vw(-1px);
 			/*.desc-wrap {
 				margin: 30px;
 				padding: px2vw(56px) px2vw(30px);
