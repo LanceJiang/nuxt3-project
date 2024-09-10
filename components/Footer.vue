@@ -330,6 +330,7 @@ const activeNames = ref([])
 		color: #757575;
 	}
 }
+// 兼容pc
 .pro_pc {
 	.mobile-icons-wrap {
 		display: none;
