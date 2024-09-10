@@ -9,8 +9,8 @@
 						mode="horizontal"
 						:ellipsis="false"
 					>
-						<svg-icon name="menu" class="icon more-menu" />
-						<el-menu-item class="nav-item nav-logo"  @click="handleClickMenu({ path: '/' })">
+						<svg-icon name="menu" class="icon more-menu" @click="visible = true" />
+						<el-menu-item class="nav-item nav-logo"  @click="goHome">
 							<svg-icon name="logo" class="icon logo" />
 						</el-menu-item>
 
@@ -43,6 +43,35 @@
 				</div>
 			</div>
 		</header>
+		<el-drawer v-model="visible" class="main-header_menu-drawer" direction="ltr" size="75vw">
+			<template #header>
+				<div class="header">
+					<svg-icon name="logo" class="logo" @click="goHome" />
+				</div>
+			</template>
+			<template #default>
+				<el-menu
+					:default-active="activeMenu"
+					class="main-nav"
+					mode="vertical"
+				>
+					<el-menu-item class="nav-item" :index="nav.path" v-for="(nav, i) in menuList" :key="i" @click="handleClickMenu(nav)">{{nav.label}}</el-menu-item>
+<!--											<el-menu-item index="1">Processing Center</el-menu-item>
+						<el-sub-menu index="2">
+							<template #title>Workspace</template>
+							<el-menu-item index="2-1">item one</el-menu-item>
+							<el-menu-item index="2-2">item two</el-menu-item>
+							<el-menu-item index="2-3">item three</el-menu-item>
+							<el-sub-menu index="2-4">
+								<template #title>item four</template>
+								<el-menu-item index="2-4-1">item one</el-menu-item>
+								<el-menu-item index="2-4-2">item two</el-menu-item>
+								<el-menu-item index="2-4-3">item three</el-menu-item>
+							</el-sub-menu>
+						</el-sub-menu>-->
+				</el-menu>
+			</template>
+		</el-drawer>
 	</div>
 </template>
 
@@ -86,6 +115,8 @@ const localJump = (action: 'login' | 'register') => {
 	jumpUrl(`https://seller.hyinsight.com/#/home?action=${action}`)
 }
 
+const visible = ref(false)
+
 /* 切换亮色暗色模式逻辑代码 */
 const useIsLight = computed(() => useGlobalStore.isLight)
 
@@ -106,7 +137,13 @@ const changeThemePriamry = (val: string) => {
 
 const activeMenu = computed(() => (route.meta?.activeMenu ? route.meta.activeMenu : route.path))
 const handleClickMenu = (nav: any) => {
+	if(visible.value) {
+		visible.value = false
+	}
 	router.push(nav.path)
+}
+const goHome = () => {
+	handleClickMenu({ path: '/' })
 }
 </script>
 

@@ -53,63 +53,65 @@
 			}
 		}
 	}
-	.main-nav.el-menu {
-
-		--el-menu-horizontal-height: 48px;
-		--el-menu-active-color: var(--link-color);
-		--el-menu-text-color: #000;
-		--el-menu-base-level-padding: 14px;
-
-		border-bottom: 0;
-		//flex: 1 0 auto;
-		//display: inline-flex;
-		display: flex;
-		align-items: center;
-		gap: 40px;
-
-		//:deep(.el-menu-item) {
-		.el-menu-item {
-			border-bottom: 0;
-			font-weight: 600;
-
-			&.is-active {
-				background-color: var(--el-menu-active-color);
-				color: #fff !important;
-			}
-
-			&.nav-logo {
-				background-color: transparent;
-				.icon {
-					font-size: 58px;
-				}
-			}
-		}
-
-		//:deep(.el-sub-menu) {
-		.el-sub-menu {
-			.el-sub-menu__title {
-				font-weight: 600;
-				//color: #000;
-			}
-		}
-	}
 	.icon {
 		font-size: 24px;
 	}
 	.more-menu {
 		display: none;
 	}
+}
+// 导航菜单
+.main-nav.el-menu {
 
+	--el-menu-horizontal-height: 48px;
+	--el-menu-active-color: var(--link-color);
+	--el-menu-text-color: #000;
+	--el-menu-base-level-padding: 14px;
+
+	border-bottom: 0;
+	&--horizontal {
+		display: flex;
+		align-items: center;
+	}
+	//flex: 1 0 auto;
+	//display: inline-flex;
+	gap: 40px;
+
+	.el-menu-item {
+		border-bottom: 0;
+		font-weight: 600;
+
+		&.is-active {
+			background-color: var(--el-menu-active-color);
+			color: #fff !important;
+		}
+
+		&.nav-logo {
+			background-color: transparent;
+			.icon {
+				font-size: 58px;
+			}
+		}
+	}
+
+	.el-sub-menu {
+		.el-sub-menu__title {
+			font-weight: 600;
+			//color: #000;
+		}
+	}
 }
 // 兼容手机端
 .pro_mobile {
 	.main-header {
 		.local_container {
+			.inner-wrap {
+				//justify-content: flex-start;
+			}
 			.right-actions {
 				.el-button {
 					font-size: mx2vw(12px);
-					padding: 8px 6px;
-
+					padding: mx2vw(8px) mx2vw(6px);
 				}
 				/*.login {
 				}*/
@@ -137,6 +139,41 @@
 		}
 		.icon {
 			font-size: mx2vw(24px);
+		}
+		&_menu-drawer {
+			.logo {
+				font-size: mx2vw(58px);
+			}
+			.el-drawer {
+				&__header {
+					align-items: flex-start;
+					margin-bottom: 0;
+					//padding: mx2vw(30px) mx2vw(24px);
+					padding: mx2vw(30px) mx2vw(24px);
+				}
+				&__body {
+					padding: 0 0 mx2vw(24px) 0;
+				}
+			}
+			.main-nav.el-menu {
+				--el-menu-horizontal-height: 12.8vw; // 48px/375 * 100
+				--el-menu-base-level-padding: 8vw; // 30px / 375 * 100
+				//--el-menu-active-color: var(--link-color);
+				//--el-menu-text-color: #000;
+
+				gap: mx2vw(30px);
+
+				.el-menu-item {
+					width: max-content;
+
+				}
+
+/*				.el-sub-menu {
+					.el-sub-menu__title {
+						font-weight: 600;
+					}
+				}*/
+			}
 		}
 	}
 }
