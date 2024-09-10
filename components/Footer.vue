@@ -1,6 +1,7 @@
 <template>
 	<footer class="main-footer">
-		<div class="local_container">
+		<!--pc-->
+		<div class="mobile:hidden local_container">
 			<div class="icons-wrap">
 				<svg-icon name="logo" class="text-[58px]" style="height: 44px" />
 				<div class="icon-list">
@@ -14,8 +15,23 @@
 				</div>
 			</div>
 		</div>
-		<div class="copy-right">
+		<div class="mobile:hidden copy-right">
 			Copyright © 2024 - Designed by Hyinsight. Guangdong ICP for 2024166784-1
+		</div>
+		<!-- mobile -->
+		<el-collapse class="pc:hidden collapse-wrap" v-model="activeNames">
+			<el-collapse-item class="links-wrap" v-for="(group, i) of nav_groups" :title="group.title" :name="i">
+				<div :class="['text', link.url ? 'link' : '']" v-for="link of group.items" @click="jumpUrl(link.url)">{{ link.label }}</div>
+			</el-collapse-item>
+		</el-collapse>
+		<div class="mobile-icons-wrap icons-wrap">
+			<svg-icon name="logo" class="logo" />
+			<div class="icon-list">
+				<svg-icon v-for="icon of logo_links" :name="icon.icon" :class="['icon', icon.url ? 'link' : '']" @click="jumpUrl(icon.url)"></svg-icon>
+			</div>
+			<div class="copy-right">
+				Copyright © 2024 - Designed by Hyinsight. Guangdong ICP for 2024166784-1
+			</div>
 		</div>
 	</footer>
 </template>
@@ -189,7 +205,7 @@ const nav_groups = [
 		]
 	}
 ]
-
+const activeNames = ref([])
 </script>
 
 <style lang="scss" scoped>
@@ -212,6 +228,9 @@ const nav_groups = [
 			}
 		}
 	}
+	/*.collapse-wrap {
+		display: none;
+	}*/
 	.icons-wrap {
 		display: flex;
 		flex-direction: column;
@@ -242,14 +261,14 @@ const nav_groups = [
 			flex-direction: column;
 			justify-content: flex-start;
 			gap: 12px;
-			.link {
-				cursor: pointer;
-				text-transform: capitalize;
-				color: var(--primary-color);
-				text-decoration: unset;
-				&:hover {
-					color: var(--link-color);
-				}
+		}
+		.link {
+			cursor: pointer;
+			text-transform: capitalize;
+			color: var(--primary-color);
+			text-decoration: unset;
+			&:hover {
+				color: var(--link-color);
 			}
 		}
 	}
@@ -265,14 +284,55 @@ const nav_groups = [
 .pro_mobile {
 	.main-footer {
 		.local_container {
-			flex-direction: column;
-			gap: 20px;
+			display: none;
+		}
+		.collapse-wrap {
+			padding: 0 mx2vw(16px);
+			--el-fill-color-blank: transparent;
+			&:deep(.el-collapse-item__header) {
+				font-size: mx2vw(16px);
+				color: var(--primary-color);
+				height: mx2vw(52px);
+				line-height: mx2vw(52px);
+			}
+			&:deep(.el-collapse-item__content) {
+				padding-bottom: mx2vw(10px);
+			}
+			.links-wrap {
+				.text {
+					font-size: mx2vw(14px);
+					width: max-content;
+				}
+			}
+		}
+
+		.icons-wrap {
+			align-items: center;
+			padding: mx2vw(24px) mx2vw(16px);
+			gap: mx2vw(24px);
+			background: #f3f3f3;
+			.logo {
+				font-size: mx2vw(82px);
+				height: mx2vw(62px);
+			}
+			.icon-list {
+				margin-top: 0;
+				.icon {
+					font-size: mx2vw(24px);
+				}
+			}
 		}
 	}
 	.copy-right {
 		//padding: 0 10px;
-		line-height: px2vw(120px);
-		font-size: px2vw(28px);
+		line-height: mx2vw(16px);
+		font-size: mx2vw(12px);
+		color: #757575;
+	}
+}
+.pro_pc {
+	.mobile-icons-wrap {
+		display: none;
 	}
 }
 </style>
