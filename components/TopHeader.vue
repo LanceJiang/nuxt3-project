@@ -9,11 +9,14 @@
 						mode="horizontal"
 						:ellipsis="false"
 					>
-						<el-menu-item class="nav-item logo"  @click="handleClickMenu({ path: '/' })">
-							<svg_logo />
+						<svg-icon name="menu" class="icon more-menu" />
+						<el-menu-item class="nav-item nav-logo"  @click="handleClickMenu({ path: '/' })">
+							<svg-icon name="logo" class="icon logo" />
 						</el-menu-item>
 
-						<el-menu-item class="nav-item" :index="nav.path" v-for="(nav, i) in menuList" :key="i" @click="handleClickMenu(nav)">{{nav.label}}</el-menu-item>
+						<template v-if="!useGlobalStore.isMobile">
+							<el-menu-item class="nav-item" :index="nav.path" v-for="(nav, i) in menuList" :key="i" @click="handleClickMenu(nav)">{{nav.label}}</el-menu-item>
+						</template>
 <!--						<el-menu-item index="1">Processing Center</el-menu-item>
 						<el-sub-menu index="2">
 							<template #title>Workspace</template>
@@ -29,11 +32,11 @@
 						</el-sub-menu>-->
 					</el-menu>
 					<div class="right-actions">
-						<el-button text @click="localJump('login')">
-							<svg_SingnIn />
+						<el-button class="login" text @click="localJump('login')">
+							<svg-icon name="SingnIn" class="icon" />
 							Sign In
 						</el-button>
-						<el-button round @click="localJump('register')">
+						<el-button class="register" round @click="localJump('register')">
 							Sign Up For Free
 						</el-button>
 					</div>
@@ -53,8 +56,8 @@ import { login, setToken } from '@/api/user'
 import { jumpUrl } from '@/utils'
 
 import { GlobalStore } from '@/store'
-import svg_SingnIn from '@/assets/svg/SingnIn.svg'
-import svg_logo from '@/assets/svg/logo.svg'
+// import svg_SingnIn from '@/assets/svg/SingnIn.svg'
+// import svg_logo from '@/assets/svg/logo.svg'
 
 import { useI18n } from 'vue-i18n'
 const route = useRoute()

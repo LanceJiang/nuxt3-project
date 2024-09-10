@@ -77,8 +77,11 @@
 				color: #fff !important;
 			}
 
-			&.logo {
+			&.nav-logo {
 				background-color: transparent;
+				.icon {
+					font-size: 58px;
+				}
 			}
 		}
 
@@ -88,6 +91,52 @@
 				font-weight: 600;
 				//color: #000;
 			}
+		}
+	}
+	.icon {
+		font-size: 24px;
+	}
+	.more-menu {
+		display: none;
+	}
+
+}
+// 兼容手机端
+.pro_mobile {
+	.main-header {
+		.local_container {
+			.right-actions {
+				.el-button {
+					font-size: mx2vw(12px);
+					padding: 8px 6px;
+
+				}
+				/*.login {
+				}*/
+			}
+		}
+		.main-nav.el-menu {
+			gap: mx2vw(14px);
+			.el-menu-item {
+				padding: 0;
+				&.nav-logo {
+					.icon {
+						//font-size: mx2vw(58px);
+						//height: mx2vw(44px);
+					}
+				}
+			}
+		}
+		.more-menu {
+			display: flex;
+			cursor: pointer;
+			font-size: mx2vw(24px);
+			padding: mx2vw(6px);
+			//font-size: 24px;
+			//padding: 6px;
+		}
+		.icon {
+			font-size: mx2vw(24px);
 		}
 	}
 }
