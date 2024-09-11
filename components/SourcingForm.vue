@@ -36,11 +36,9 @@
 					<img w-full :src="dialogImageUrl" alt="Preview Image" />
 				</el-dialog>
 			</el-form-item>
-			<el-form-item>
-				<el-button type="primary" class="w-full" style="height: 40px !important;" round @click="onSubmit" :loading="loading">
-					Submit
-				</el-button>
-			</el-form-item>
+			<el-button type="primary" class="w-full" style="height: 40px !important;" round @click="onSubmit" :loading="loading">
+				Submit
+			</el-button>
 		</client-only>
 	</el-form>
 </template>

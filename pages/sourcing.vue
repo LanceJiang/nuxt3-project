@@ -12,35 +12,44 @@
 			</header>
 
 			<div class="common-inner-auto sourcing-part1">
-				<div class="item">
-					<img class="-mb-[20px]" src="@/assets/image/sourcing/img_1.webp" />
-					<div class="desc-wrap">
-						<header class="part-title" style="text-align: left;">Source products from thousands of manufacturers</header>
-						<p class="mb-[40px]">
-							>>Seamless Integration with over 10 Major E-commerce Platforms in China <br/>
-							>>You can find thousands of factories, which allows you to directly talk with them to get more competitive quotes and more professional service.
-						</p>
+				<div class="item-box">
+					<header class="part-title pc:hidden" style="text-align: left">Source products from thousands of manufacturers</header>
+					<div class="item">
+						<img class="-mb-[20px]" src="@/assets/image/sourcing/img_1.webp" />
+						<div class="desc-wrap">
+							<header class="part-title mobile:hidden" style="text-align: left;">Source products from thousands of manufacturers</header>
+							<p class="desc">
+								>>Seamless Integration with over 10 Major E-commerce Platforms in China <br/>
+								>>You can find thousands of factories, which allows you to directly talk with them to get more competitive quotes and more professional service.
+							</p>
+						</div>
 					</div>
 				</div>
 
-				<div class="item">
-					<img class="order-2" src="@/assets/image/sourcing/img_2.webp" />
-					<div class="desc-wrap text-right">
-						<header class="part-title" style="text-align: right;">Vetted Suppliers</header>
-						<p class="mb-[40px] text-right">
-							>>We partner with thoroughly evaluated manufacturers to guarantee that every product meets the highest standards, without worrying the inventory shortage, giving you confidence in the excellence of your offerings.
-							>>Get the benefits of wholesale pricing even when ordering just one piece. This flexibility allows you to test products, manage inventory, and scale your brand without committing to large quantities.
-						</p>
+				<div class="item-box">
+					<header class="part-title pc:hidden" style="text-align: right">Vetted Suppliers</header>
+					<div class="item">
+						<img class="order-2" src="@/assets/image/sourcing/img_2.webp" />
+						<div class="desc-wrap text-right">
+							<header class="part-title mobile:hidden" style="text-align: right;">Vetted Suppliers</header>
+							<p class="desc text-right">
+								>>We partner with thoroughly evaluated manufacturers to guarantee that every product meets the highest standards, without worrying the inventory shortage, giving you confidence in the excellence of your offerings.
+								>>Get the benefits of wholesale pricing even when ordering just one piece. This flexibility allows you to test products, manage inventory, and scale your brand without committing to large quantities.
+							</p>
+						</div>
 					</div>
 				</div>
 
-				<div class="item">
-					<img class="-mb-[20px]" src="@/assets/image/sourcing/img_3.webp" />
-					<div class="desc-wrap">
-						<header class="part-title" style="text-align: left;">24-Hour Feedback</header>
-						<p class="mb-[40px]">
-							Experience rapid responses with 24-hour feedback to keep your sourcing process smooth and efficient, ensuring you stay on track with your brand’s needs.
-						</p>
+				<div class="item-box">
+					<header class="part-title pc:hidden" style="text-align: left">24-Hour Feedback</header>
+					<div class="item">
+						<img class="-mt-[20px]" src="@/assets/image/sourcing/img_3.webp" />
+						<div class="desc-wrap">
+							<header class="part-title mobile:hidden" style="text-align: left;">24-Hour Feedback</header>
+							<p class="desc">
+								Experience rapid responses with 24-hour feedback to keep your sourcing process smooth and efficient, ensuring you stay on track with your brand’s needs.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -62,7 +71,7 @@
 				</div>
 			</div>
 
-			<div class="common-inner-auto">
+			<div class="sourcing-form-wrap common-inner-auto">
 				<div class="part-title">
 					Tell us your sourcing request and we'll help you reach them
 				</div>
@@ -200,6 +209,8 @@ const scrollTo = () => {
 		display: flex;
 		flex-direction: column;
 		.item {
+			&-box {
+			}
 			//padding-top: 64px;
 			display: flex;
 			//align-items: center;
@@ -211,10 +222,8 @@ const scrollTo = () => {
 				//height: 378px;
 				//border-radius: 8px;
 			}
-			.title {
-				font-size: 16px;
-				//font-style: normal;
-				font-weight: 700;
+			.desc {
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -262,6 +271,72 @@ const scrollTo = () => {
 		.right-pic {
 			width: 782px;
 			flex-shrink: 0;
+		}
+	}
+}
+// 兼容手机端
+.pro_mobile {
+	.sourcing {
+		&-wrap {
+			font-size: mx2vw(14px);
+			//overflow-x: hidden;
+		}
+		&-part1 {
+			padding: mx2vw(16px) 0 0 0;
+			.item {
+				gap: mx2vw(10px);
+				&-box {
+					.part-title {
+						font-size: mx2vw(20px);
+						padding-top: mx2vw(24px);
+						padding-bottom: mx2vw(16px);
+					}
+				}
+				img {
+					width: mx2vw(134px);
+					margin: 0;
+				}
+				.desc {
+					margin-bottom: 0;
+					font-size: mx2vw(12px);
+				}
+			}
+		}
+		&-part2 {
+			.box-wrap {
+				flex-direction: column;
+				margin-top: mx2vw(16px);
+				gap: mx2vw(16px);
+				.item {
+					width: 100%;
+					padding: mx2vw(24px) mx2vw(16px);
+					.title {
+						margin: mx2vw(10px);
+						font-size: mx2vw(16px);
+					}
+					.desc {
+						font-size: mx2vw(12px);
+					}
+					img {
+						width: mx2vw(122px);
+					}
+				}
+			}
+		}
+		&-form-wrap {
+			width: 100%;
+			max-width: unset;
+		}
+		&-part3 {
+			flex-direction: column;
+			.right-pic {
+				order: -1;
+				width: 100%;
+			}
+			.form-wrap {
+				padding: mx2vw(24px) mx2vw(16px);
+				border-radius: 0;
+			}
 		}
 	}
 }
