@@ -21,7 +21,7 @@
 				Advantages of print-on-demand
 			</div>
 			<div class="ladder-wrap">
-				<div v-for="(v, i) of ladders" :key="i" class="ladder_item" :style="`padding-left: ${180 * i}px`">
+				<div v-for="(v, i) of ladders" :key="i" class="ladder_item" :style="`--pl-level: ${i};`">
 					<img :src="v.pic" />
 					<div class="desc-wrap mobile:text-center">
 						<header class="capitalize">{{ v.title }}</header>
@@ -183,8 +183,10 @@ const localJump = () => jumpUrl('https://seller.hyinsight.com/#/home/searchResul
 	// 阶梯
 	.ladder {
 		&_item {
+			--pl-level: 0;
 			display: flex;
 			align-items: center;
+			padding-left: calc(var(--pl-level) * px2vw(176px));
 			& + .ladder_item {
 				margin-top: 30px;
 			}
@@ -201,8 +203,10 @@ const localJump = () => jumpUrl('https://seller.hyinsight.com/#/home/searchResul
 				}
 			}
 			img {
-				height: 220px;
-				margin-right: 60px;
+				height: px2vw(220px);
+				max-height: 220px;
+				//margin-right: px2vw(60px);
+				margin-right: 50px;
 			}
 			& .ladder_item {
 				margin-top: 30px;
