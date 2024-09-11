@@ -216,6 +216,10 @@ img {
 
 // 兼容手机端
 .pro_mobile {
+	.common-inner-auto {
+		max-width: mx2vw(343px);
+		padding: 0;
+	}
 	.part-title {
 		font-size: mx2vw(24px);
 		padding-top: mx2vw(50px);
@@ -266,9 +270,15 @@ img {
 			}
 		}
 	}
+	.mobile\:hidden {
+		display: none !important;
+	}
 }
 // 兼容pc
 .pro_pc {
 	/*.sign-bar {
 	}*/
+	.pc\:hidden {
+		display: none !important;
+	}
 }
