@@ -94,7 +94,11 @@
 								<svg-icon name="page" class="icon" />Extensive Design Templates – Design Made Easy</header>
 							<p class="desc text-right">
 								<span class="font-bold">Effortless Creativity:</span>
-								Dive into our vast library of design templates that make it easy for you to create stunning products without any design experience. Personalized Touch: Customize templates to match your style and brand identity, making your merchandise truly yours.
+								Dive into our vast library of design templates that make it easy for you to create stunning products without any design experience.
+							</p>
+							<p class="desc text-right">
+								<span class="font-bold">Personalized Touch:</span>
+								Customize templates to match your style and brand identity, making your merchandise truly yours.
 							</p>
 						</div>
 					</div>
