@@ -1,6 +1,11 @@
 <template>
 	<div class="sign-bar">
-		<el-button class="btn" @click="goRegister">sign up-it’s free</el-button>
+		<div class="box">
+			<div class="desc">
+				Start Your Business Journey Here
+			</div>
+			<el-button class="btn" @click="goRegister">sign up-it’s free</el-button>
+		</div>
 	</div>
 </template>
 <script setup lang="ts">
