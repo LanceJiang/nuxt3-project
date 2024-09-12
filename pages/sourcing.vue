@@ -296,14 +296,19 @@ const scrollTo = () => {
 	}
 	&-part3 {
 		display: flex;
+		align-items: center;
 		.form-wrap {
 			flex: 1;
+			align-self: normal;
 			padding: 60px;
 			border-radius: 6px 6px 0 0;
 			background: #F7F7F7;
 		}
 		.right-pic {
-			width: 782px;
+			width: px2vw(782px);
+			max-width: 782px;
+			//height: px2vw(768px);
+			//max-height: 768px;
 			flex-shrink: 0;
 		}
 	}
@@ -402,6 +407,7 @@ const scrollTo = () => {
 			.form-wrap {
 				padding: mx2vw(24px) mx2vw(16px);
 				border-radius: 0;
+				width: 100%;
 			}
 		}
 	}
