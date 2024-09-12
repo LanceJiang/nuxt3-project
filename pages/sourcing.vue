@@ -178,6 +178,7 @@ const scrollTo = () => {
 		.polygon_3,
 		.polygon_4 {
 			position: absolute;
+			font-size: px2vw(1px);
 		}
 		.polygon_1 {
 			right: 0;
@@ -279,7 +280,29 @@ const scrollTo = () => {
 	.sourcing {
 		&-wrap {
 			font-size: mx2vw(14px);
-			//overflow-x: hidden;
+			overflow-x: hidden;
+			.polygon_1,
+			.polygon_2,
+			.polygon_3,
+			.polygon_4 {
+				font-size: mx2vw(0.8px);
+			}
+			.polygon_1 {
+				right: mx2vw(-50px);
+				top: mx2vw(200px);
+			}
+			.polygon_2 {
+				left: mx2vw(-70px);
+				top: mx2vw(420px);
+			}
+			.polygon_3 {
+				right: mx2vw(-50px);
+				top: mx2vw(1160px);
+			}
+			.polygon_4 {
+				left: 0;
+				top: mx2vw(1448px);
+			}
 		}
 		&-part1 {
 			padding: mx2vw(16px) 0 0 0;
