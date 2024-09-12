@@ -110,6 +110,50 @@ const nav_groups = [
 			}
 		]
 	},
+	// help center
+	{
+		title: 'help center',
+		items: [
+			{
+				label: 'contact us',
+				url: '/contact'
+			},
+			{
+				label: 'user guide',
+				url: 'https://seller.hyinsight.com/#/helpCenter'
+			}
+		]
+	},
+	// company
+	/*{
+		title: 'Company',
+		items: [
+			{
+				label: 'about hyinsight',
+				url: ''
+			},
+			{
+				label: 'blog',
+				url: ''
+			},
+			{
+				label: 'customer stories',
+				url: ''
+			},
+			{
+				label: 'partners',
+				url: ''
+			},
+			{
+				label: 'careers',
+				url: ''
+			},
+			{
+				label: 'affiliates program',
+				url: ''
+			}
+		]
+	},*/
 	// sells
 	{
 		title: 'Start selling',
@@ -157,50 +201,6 @@ const nav_groups = [
 			{
 				label: 'Merch maker',
 				url: ''
-			}
-		]
-	},
-	// company
-	/*{
-		title: 'Company',
-		items: [
-			{
-				label: 'about hyinsight',
-				url: ''
-			},
-			{
-				label: 'blog',
-				url: ''
-			},
-			{
-				label: 'customer stories',
-				url: ''
-			},
-			{
-				label: 'partners',
-				url: ''
-			},
-			{
-				label: 'careers',
-				url: ''
-			},
-			{
-				label: 'affiliates program',
-				url: ''
-			}
-		]
-	},*/
-	// help center
-	{
-		title: 'help center',
-		items: [
-			{
-				label: 'contact us',
-				url: '/contact'
-			},
-			{
-				label: 'user guide',
-				url: 'https://seller.hyinsight.com/#/helpCenter'
 			}
 		]
 	}

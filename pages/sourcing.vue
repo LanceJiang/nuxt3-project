@@ -18,10 +18,18 @@
 						<img class="-mb-[20px]" src="@/assets/image/sourcing/img_1.webp" />
 						<div class="desc-wrap">
 							<header class="part-title mobile:hidden" style="text-align: left;">Source products from thousands of manufacturers</header>
-							<p class="desc">
-								>>Seamless Integration with over 10 Major E-commerce Platforms in China <br/>
-								>>You can find thousands of factories, which allows you to directly talk with them to get more competitive quotes and more professional service.
-							</p>
+							<div class="desc-box">
+								<svg-icon name="pencil" class="icon" />
+								<p class="desc">
+									Seamless Integration with over 10 Major E-commerce Platforms in China
+								</p>
+							</div>
+							<div class="desc-box">
+								<svg-icon name="pencil" class="icon" />
+								<p class="desc">
+									You can find thousands of factories, which allows you to directly talk with them to get more competitive quotes and more professional service.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -30,12 +38,20 @@
 					<header class="part-title pc:hidden" style="text-align: right">Vetted Suppliers</header>
 					<div class="item">
 						<img class="order-2" src="@/assets/image/sourcing/img_2.webp" />
-						<div class="desc-wrap text-right">
+						<div class="desc-wrap">
 							<header class="part-title mobile:hidden" style="text-align: right;">Vetted Suppliers</header>
-							<p class="desc text-right">
-								>>We partner with thoroughly evaluated manufacturers to guarantee that every product meets the highest standards, without worrying the inventory shortage, giving you confidence in the excellence of your offerings.
-								>>Get the benefits of wholesale pricing even when ordering just one piece. This flexibility allows you to test products, manage inventory, and scale your brand without committing to large quantities.
-							</p>
+							<div class="desc-box">
+								<svg-icon name="pencil" class="icon" />
+								<p class="desc">
+									We partner with thoroughly evaluated manufacturers to guarantee that every product meets the highest standards, without worrying the inventory shortage, giving you confidence in the excellence of your offerings.
+								</p>
+							</div>
+							<div class="desc-box">
+								<svg-icon name="pencil" class="icon" />
+								<p class="desc">
+									Get the benefits of wholesale pricing even when ordering just one piece. This flexibility allows you to test products, manage inventory, and scale your brand without committing to large quantities.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -46,9 +62,12 @@
 						<img class="-mt-[20px]" src="@/assets/image/sourcing/img_3.webp" />
 						<div class="desc-wrap">
 							<header class="part-title mobile:hidden" style="text-align: left;">24-Hour Feedback</header>
-							<p class="desc">
-								Experience rapid responses with 24-hour feedback to keep your sourcing process smooth and efficient, ensuring you stay on track with your brand’s needs.
-							</p>
+							<div class="desc-box">
+								<svg-icon name="pencil" class="icon" />
+								<p class="desc">
+									Experience rapid responses with 24-hour feedback to keep your sourcing process smooth and efficient, ensuring you stay on track with your brand’s needs.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -206,7 +225,6 @@ const scrollTo = () => {
 	}
 	&-part1 {
 		padding: 58px;
-
 		display: flex;
 		flex-direction: column;
 		.item {
@@ -224,7 +242,22 @@ const scrollTo = () => {
 				//border-radius: 8px;
 			}
 			.desc {
-				margin-bottom: 20px;
+				&-wrap {
+					padding-bottom: 20px;
+				}
+				&-box {
+					display: flex;
+					align-items: flex-start;
+					& + .desc-box {
+						margin-top: 6px;
+					}
+					.icon {
+						width: 24px;
+						font-size: 20px;
+						flex-shrink: 0;
+						margin-top: -2px;
+					}
+				}
 			}
 		}
 	}
@@ -322,6 +355,16 @@ const scrollTo = () => {
 				.desc {
 					margin-bottom: 0;
 					font-size: mx2vw(12px);
+					&-box {
+						.icon {
+							width: mx2vw(16px);
+							font-size: mx2vw(16px);
+							margin-top: mx2vw(-2px);
+						}
+						& + .desc-box {
+							margin-top: mx2vw(12px);
+						}
+					}
 				}
 			}
 		}

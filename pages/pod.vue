@@ -25,7 +25,7 @@
 					<img :src="v.pic" />
 					<div class="desc-wrap mobile:text-center">
 						<header class="capitalize">{{ v.title }}</header>
-						<p class="desc" v-for="(desc, _i) of v.descs" :key="_i">{{desc}}</p>
+						<p class="desc" v-for="(desc, _i) of v.descs" :key="_i" v-html="desc"></p>
 					</div>
 				</div>
 			</div>
@@ -44,7 +44,7 @@
 					<img src="@/assets/image/pod/services_1.webp" />
 					<div class="desc-wrap">
 						<header class="title">Creators and Designers</header>
-						<p class="desc">Start monetizing your audience or art with zero upfront investment. Selling custom merchandise is the best way to keep your creative passion alive.</p>
+						<p class="desc">Start monetizing your audience or art with zero upfront investment. <br/>Selling custom merchandise is the best way to keep your creative passion alive.</p>
 						<el-button type="primary" round class="min-w-[230px]" @click="localJump">Creat Your Merch</el-button>
 					</div>
 				</div>
@@ -53,7 +53,7 @@
 					<img class="order-2" src="@/assets/image/pod/services_2.webp" />
 					<div class="desc-wrap text-right">
 						<header class="title">Ecommerce Entrepreneurs</header>
-						<p class="desc">Build your brand without any upfront costs. Launching or growing your e-commerce business is now easier than ever with Hyinsight</p>
+						<p class="desc">Build your brand without any upfront costs. <br/>Launching or growing your e-commerce business is now easier than ever with Hyinsight</p>
 						<el-button type="primary" round class="min-w-[230px]" @click="localJump">Start Selling</el-button>
 					</div>
 				</div>
@@ -132,7 +132,7 @@
 							<header class="title justify-end mobile:hidden"><svg-icon name="globe" class="icon" />Flexible Options, Exceptional Service</header>
 							<p class="desc text-right">
 								<span class="font-bold">Hyinsight prioritizes exceptional customer service,</span>
-								offering tailored, customizable solutions for a seamless and personalized experience. - From labeled product to custom packaging, 7*24H service Hyinsight’s flexible options scale with your growing business.
+								offering tailored, customizable solutions for a seamless and personalized experience. From labeled product to custom packaging, 7*24H service Hyinsight’s flexible options scale with your growing business.
 							</p>
 						</div>
 					</div>
@@ -155,8 +155,7 @@ const ladders = [
 		pic: img_ladder_1,
 		title: 'Cost Saving',
 		descs: [
-			'There’s no initial inventory needed, so this automatically saves you money upfront and can help increase profit margins.',
-			'No MOQ request, products are only printed when they are ordered. You can list a product and see if there’s an interest in it first before ordering it.',
+			'There’s no initial inventory needed, so this automatically saves you money upfront and can help increase profit margins.<br/>No MOQ request, products are only printed when they are ordered. You can list a product and see if there’s an interest in it first before ordering it.',
 		]
 	},
 	{

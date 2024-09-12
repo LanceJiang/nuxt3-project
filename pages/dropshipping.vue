@@ -335,6 +335,12 @@ const  goLogin = () => {
 						margin-top: mx2vw(14px);
 						gap: mx2vw(14px);
 						font-size: mx2vw(12px);
+						.desc-box {
+							.icon {
+								width: mx2vw(16px);
+								font-size: mx2vw(16px);
+							}
+						}
 					}
 					&-box {
 						.icon {
