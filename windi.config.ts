@@ -13,7 +13,7 @@ export default {
 	theme: {
 		screens: {
 			'mobile': { max: '750px' }, // 最大宽 750
-			'pc': '750px', // 最小宽 750
+			'pc': '751px', // 最小宽 750
 			sm: '640px',
 			// => @media (min-width: 640px) { ... }
 

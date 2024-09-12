@@ -13,39 +13,43 @@
 			</div>
 
 			<div class="common-inner-auto sell-part1">
+				<header class="part-title pc:hidden">How to Integrate with Shopify</header>
 				<div class="item">
 					<img class="" src="@/assets/image/sell/card_1.webp" />
 					<div class="desc-wrap">
-						<header class="part-title" style="text-align: left;">How to Integrate with Shopify</header>
-						<el-button class="btn capitalize w-[245px]" type="primary" round  @click="localJump">connect to Shopify</el-button>
-						<el-button class="btn capitalize w-[245px]" round>watch tutorial</el-button>
+						<header class="part-title mobile:hidden" style="text-align: left;">How to Integrate with Shopify</header>
+						<el-button class="btn capitalize" type="primary" round  @click="localJump">connect to Shopify</el-button>
+						<el-button class="btn capitalize" round @click="tutorialLink('shopify')">watch tutorial</el-button>
 					</div>
 				</div>
 
+				<header class="part-title pc:hidden">How to Integrate with Tiktok Shop</header>
 				<div class="item">
-					<img class="order-2" src="@/assets/image/sell/card_2.webp" />
+					<img class="pc:order-2" src="@/assets/image/sell/card_2.webp" />
 					<div class="desc-wrap items-end">
-						<header class="part-title" style="text-align: right;">How to Integrate with Tiktok Shop</header>
-						<el-button class="btn capitalize w-[245px]" type="primary" round @click="localJump">connect to tikTok shop</el-button>
-						<el-button class="btn capitalize w-[245px]" round @click="testClick">watch tutorial</el-button>
+						<header class="part-title mobile:hidden" style="text-align: right;">How to Integrate with Tiktok Shop</header>
+						<el-button class="btn capitalize" type="primary" round @click="localJump">connect to tikTok shop</el-button>
+						<el-button class="btn capitalize" round @click="tutorialLink('tiktok')">watch tutorial</el-button>
 					</div>
 				</div>
 
+				<header class="part-title pc:hidden">How to Integrate with WooCommerce</header>
 				<div class="item">
 					<img class="" src="@/assets/image/sell/card_3.webp" />
 					<div class="desc-wrap">
-						<header class="part-title" style="text-align: left;">How to Integrate with WooCommerce</header>
-						<el-button class="btn capitalize w-[245px]" type="primary" round @click="localJump">connect to woocommerce</el-button>
-						<el-button class="btn capitalize w-[245px]" round @click="testClick">watch tutorial</el-button>
+						<header class="part-title mobile:hidden" style="text-align: left;">How to Integrate with WooCommerce</header>
+						<el-button class="btn capitalize" type="primary" round @click="localJump">connect to woocommerce</el-button>
+						<el-button class="btn capitalize" round @click="tutorialLink('woo')">watch tutorial</el-button>
 					</div>
 				</div>
 
+				<header class="part-title pc:hidden">How to Integrate with your own store</header>
 				<div class="item">
-					<img class="order-2" src="@/assets/image/sell/card_4.webp" />
+					<img class="pc:order-2" src="@/assets/image/sell/card_4.webp" />
 					<div class="desc-wrap items-end">
-						<header class="part-title" style="text-align: right;">How to Integrate with your own store</header>
-						<el-button class="btn capitalize w-[245px]" type="primary" round>add products</el-button>
-						<el-button class="btn capitalize w-[245px]" round @click="testClick">watch tutorial</el-button>
+						<header class="part-title mobile:hidden" style="text-align: right;">How to Integrate with your own store</header>
+						<el-button class="btn capitalize" type="primary" round>add products</el-button>
+						<el-button class="btn capitalize" round @click="tutorialLink('others')">watch tutorial</el-button>
 					</div>
 				</div>
 			</div>
@@ -81,8 +85,17 @@ const platforms = [
 ]
 
 const localJump = () => jumpUrl('https://seller.hyinsight.com/#/diSpuPublish/index')
-const testClick = () => {
-	console.error('todo....')
+const tutorialLink = (type: 'shopify' | 'tiktok' | 'woo' | 'others') => {
+	switch (type) {
+		case 'shopify':
+			return jumpUrl('https://www.youtube.com/watch?v=kpJ6s6FrRPU')
+		case 'tiktok':
+			return jumpUrl('https://www.youtube.com/watch?v=1bLUWhz7vh0')
+		case 'woo':
+			return jumpUrl('https://www.youtube.com/watch?v=b2FYJ_JLbiA')
+		default:
+			console.log(type, '暂无教程~')
+	}
 }
 </script>
 
@@ -153,17 +166,19 @@ const testClick = () => {
 		.item {
 			//padding-top: 64px;
 			display: flex;
-			//align-items: center;
+			align-items: center;
 			gap: 60px;
 			img {
 				flex-shrink: 0;
+				max-width: px2vw(672px);
+				max-height: px2vw(366px);
 				//width: 672px;
 				//height: 366px;
-				border-radius: 8px;
+				//border-radius: 8px;
 			}
 			.part-title {
-				padding-top: 90px;
-				padding-bottom: 60px;
+				padding: 60px 0;
+				//padding-bottom: 60px;
 			}
 		}
 		.desc-wrap {
@@ -171,9 +186,61 @@ const testClick = () => {
 			display: flex;
 			flex-direction: column;
 			.btn {
+				//width: px2vw(245px);
+				width: 245px;
 				& + .btn {
 					margin-left: 0;
 					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+// 兼容手机端
+.pro_mobile {
+	.sell {
+		&-wrap {
+			.platform {
+				gap: mx2vw(16px);
+				.svg {
+					font-size: mx2vw(0.52px);
+				}
+				&-wrap {
+					padding: mx2vw(16px) 0;
+					background: #FAFAFA;
+				}
+			}
+		}
+		&-part1 {
+			padding: 0;
+			gap: 0;
+			.part-title {
+				font-size: mx2vw(20px);
+			}
+			.item {
+				//padding-top: 64px;
+				flex-direction: column;
+				gap: 0;
+				img {
+					flex-shrink: 0;
+					max-width: unset;
+					max-height: unset;
+					width: mx2vw(343px);
+					//height: 186.813px;
+					height: auto;
+				}
+			}
+			.desc-wrap {
+				margin-top: mx2vw(-17px);
+				.btn {
+					width: mx2vw(245px);
+					height: mx2vw(34px);
+					border-radius: mx2vw(34px);
+					font-size: mx2vw(14px);
+					& + .btn {
+						//margin-left: 0;
+						margin-top: mx2vw(20px);
+					}
 				}
 			}
 		}
