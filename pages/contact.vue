@@ -10,7 +10,14 @@
 				<el-button class="btn" type="primary">Help Center</el-button>
 			</header>
 			<div class="box-wrap">
-				<img src="@/assets/image/contact/email-box.webp" alt="" />
+				<div class="box">
+					<header class="title text-center">
+						Email
+					</header>
+					<div class="desc text-center">
+						Have a question or need more information? Get in touch with us via email, and we'll make sure to get back to you as quickly as possible. support@hyinsight.com
+					</div>
+				</div>
 			</div>
 
 			<SignUpBar class="sign-bar--blue"/>
@@ -75,11 +82,44 @@ const platforms = [
 		.part-title {
 			color: #262626;
 		}
-		.box-wrap {
-			margin: 80px 0;
-			img {
-				width: 100%;
+		.box {
+			padding: 80px 40px;
+			color: #000;
+			background: rgba(255, 255, 255, 0.95);
+			.title {
+				font-size: 32px;
+				font-weight: 600;
+				margin-bottom: 42px;
 			}
+			.desc {
+				font-size: 16px;
+			}
+			&-wrap {
+				margin: 80px 0;
+				padding: 20px;
+				background: url('@/assets/image/contact/email-box_bg.webp') repeat #D7E2FD;
+				background-size: 100%;
+			}
+		}
+	}
+}
+// 兼容手机端
+.pro_mobile {
+	.box {
+		padding: mx2vw(18px) mx2vw(36px);
+		.title {
+			font-size: mx2vw(32px);
+			margin-bottom: mx2vw(32px);
+		}
+		.desc {
+			font-size: mx2vw(16px);
+		}
+		&-wrap {
+			margin: mx2vw(40px) 0;
+			padding: mx2vw(10px);
+			background-image: url('@/assets/image/contact/email-box_bg_m.webp');
+			//background-size: 100%;
+			//background-repeat: no-repeat;
 		}
 	}
 }
