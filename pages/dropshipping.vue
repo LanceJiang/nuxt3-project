@@ -8,45 +8,52 @@
 			</header>
 
 			<div class="common-inner-auto dropshipping-part1">
+
+				<header class="pc:hidden part-title part-title--mobile ">The Hidden Challenges of Dropshipping</header>
+				<div class="pc:hidden desc-box desc-box--mobile">
+					<span class="icon" />
+					<div class="desc">
+						Dropshipping is a fantastic way to start a business, but it comes with hidden challenges that can derail your success.</div>
+				</div>
 				<div class="item pr-[18px]">
-					<img class="order-2" src="@/assets/image/dropshipping/part1_1.webp" />
+					<img class="pc:order-2" src="@/assets/image/dropshipping/part1_1.webp" />
 					<div class="desc-wrap">
-						<header class="part-title transform translate-x-[140px]" style="text-align: right;">The Hidden Challenges of Dropshipping</header>
-						<div class="desc-box">
+						<header class="mobile:hidden part-title transform translate-x-[140px]" style="text-align: right;">The Hidden Challenges of Dropshipping</header>
+						<div class="mobile:hidden desc-box">
 							<span class="icon" />
 							<div class="desc">
 								Dropshipping is a fantastic way to start a business, but it comes with hidden challenges that can derail your success.</div>
 						</div>
 						<div class="desc-box">
-							<svg_exclamation_mark class="icon" />
+							<svg-icon name="exclamation-mark" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Low Margins:</span>
 								With high competition, many dropshippers struggle to keep their profit margins healthy.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_exclamation_mark class="icon" />
+							<svg-icon name="exclamation-mark" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Long shipping times and delays:</span>
 								Different suppliers have different processing, billing, and shipping policies, so shipping times vary.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_exclamation_mark class="icon" />
+							<svg-icon name="exclamation-mark" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Running Out Of Stock:</span>
 								When a supplier runs out of your items, you pretty much just lost the sale.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_exclamation_mark class="icon" />
+							<svg-icon name="exclamation-mark" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Lack of Order Tracking:</span>
 								Suppliers may not always offer real-time tracking, making it challenging to keep customers updated on their order status.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_exclamation_mark class="icon" />
+							<svg-icon name="exclamation-mark" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Limited Customization and Branding:</span>
 								Limited control over products can make it hard to create a unique brand identity.
@@ -55,53 +62,60 @@
 					</div>
 				</div>
 
+				<header class="pc:hidden part-title part-title--mobile" style="text-align: left;">How Hyinsight Enhances Your Efficiency</header>
+				<div class="pc:hidden desc-box desc-box--mobile">
+					<span class="icon" />
+					<div class="desc">
+						We are here to help you navigate these challenges, offering a seamless experience from start to finish.
+					</div>
+				</div>
 				<div class="item pl-[18px]">
 					<img src="@/assets/image/dropshipping/part1_2.webp" />
 					<div class="desc-wrap">
-						<header class="part-title transform -translate-x-[140px]" style="text-align: left;">How Hyinsight Enhances Your Efficiency</header>
-						<div class="desc-box">
+						<header class="mobile:hidden part-title transform -translate-x-[140px]" style="text-align: left;">How Hyinsight Enhances Your Efficiency</header>
+						<div class="mobile:hidden desc-box">
 							<span class="icon" />
 							<div class="desc">
 								We are here to help you navigate these challenges, offering a seamless experience from start to finish.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_star class="icon" />
+							<svg-icon name="star" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Boost Your Margins:</span>
 								Premium niche products with better quality and lower prices than AliExpress and any other marketplace, designed for healthier profits.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_star class="icon" />
+							<svg-icon name="star" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Multiple shipping options:</span>
 								Covered 3000+ shipping lines to 220 countries, you could select the best options to meet your different order requests.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_star class="icon" />
+							<svg-icon name="star" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Thousands of Verified Suppliers:</span>
 								With 3rd-party verified suppliers and in-stock products, we ensure efficient sourcing and consistent quality, processing and shipping your orders immediately—no delays, no stock concerns.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_star class="icon" />
+							<svg-icon name="star" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Full-Chain Tracking:</span>
 								Enjoy traceable procurement process to helps you monitoring the status of orders, from order placement to delivery with customizable displays to hide the product's origin.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_star class="icon" />
+							<svg-icon name="star" class="icon" />
 							<div class="desc">
 								<span class="font-bold">60 days Free Storage Service:</span>
 								You can ship your own products to our warehouse for free storage for up to 60 days. Additionally, we offer hundreds of cost-effective in-house services to meet customer needs in various situations.
 							</div>
 						</div>
 						<div class="desc-box">
-							<svg_star class="icon" />
+							<svg-icon name="star" class="icon" />
 							<div class="desc">
 								<span class="font-bold">Enhanced Customization and Branding:</span>
 								Unlike traditional dropshipping platforms, Hyinsight offers you greater control over product customization and branding.
@@ -115,8 +129,8 @@
 				<div class="part-title">
 					Popular Value-added Services
 				</div>
-				<div class="text-center">
-					Explore and customize value-added services in the service marketplace tailored to your store's primary product <br/>categories and unique business needs. Below are some popular value-added services utilized by our clients:
+				<div class="text-center max-w-[880px] mx-auto">
+					Explore and customize value-added services in the service marketplace tailored to your store's primary product categories and unique business needs. Below are some popular value-added services utilized by our clients:
 				</div>
 				<div class="box-wrap">
 					<div v-for="(v, i) of cardItems" class="item" :key="i">
@@ -133,8 +147,6 @@
 </template>
 
 <script lang="ts" setup>
-import svg_exclamation_mark from '@/assets/image/dropshipping/exclamation-mark.svg'
-import svg_star from '@/assets/image/dropshipping/star.svg'
 
 import card_1 from '@/assets/image/dropshipping/card_1.webp'
 import card_2 from '@/assets/image/dropshipping/card_2.webp'
@@ -211,11 +223,12 @@ const  goLogin = () => {
 			padding: 0;
 			width: px2vw(190px);
 			height: px2vw(44px);
+			line-height: px2vw(44px);
 			border-radius: px2vw(44px);
 			font-size: px2vw(18px);
 			//background: transparent;
 			color: #3E59BB;
-			border-color: #3E59BB;
+			border-color: #fff;
 		}
 	}
 	&-wrap {
@@ -258,14 +271,17 @@ const  goLogin = () => {
 						align-items: flex-start;
 						.icon {
 							width: 24px;
+							font-size: 20px;
 							flex-shrink: 0;
-							padding-top: 4px;
+							//padding-top: 4px;
 						}
 					}
 				}
 			}
 			img {
 				flex-shrink: 0;
+				max-width: px2vw(515px);
+				max-height: px2vw(343px);
 			}
 			/*.title {
 				font-size: 16px;
@@ -292,6 +308,57 @@ const  goLogin = () => {
 				box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
 				.img {
 					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// 兼容手机端
+.pro_mobile {
+	.dropshipping {
+		&-wrap {
+			font-size: mx2vw(14px);
+		}
+		&-part1 {
+			.desc-box--mobile {
+				margin-bottom: mx2vw(16px);
+				font-size: mx2vw(14px);
+				text-align: center;
+			}
+			.item {
+				flex-direction: column;
+				gap: 0;
+				padding: 0;
+				.desc {
+					&-wrap {
+						margin-top: mx2vw(14px);
+						gap: mx2vw(14px);
+						font-size: mx2vw(12px);
+					}
+					&-box {
+						.icon {
+
+						}
+					}
+				}
+				img {
+					//flex-shrink: 0;
+					max-width: unset;
+					max-height: unset;
+					width: mx2vw(343px);
+					height: auto;
+				}
+			}
+		}
+		&-part2 {
+			.box-wrap {
+				margin-top: mx2vw(24px);
+				margin-bottom: 0;
+				gap: mx2vw(10px);
+				.item {
+					width: mx2vw(166px);
+					//img {}
 				}
 			}
 		}

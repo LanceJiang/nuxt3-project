@@ -126,6 +126,7 @@ const tutorialLink = (type: 'shopify' | 'tiktok' | 'woo' | 'others') => {
 			bottom: px2vw(259px);
 			width: px2vw(294px);
 			height: px2vw(44px);
+			line-height: px2vw(44px);
 			border-radius: px2vw(44px);
 			font-size: px2vw(20px);
 			padding: 0;
@@ -222,7 +223,7 @@ const tutorialLink = (type: 'shopify' | 'tiktok' | 'woo' | 'others') => {
 				flex-direction: column;
 				gap: 0;
 				img {
-					flex-shrink: 0;
+					//flex-shrink: 0;
 					max-width: unset;
 					max-height: unset;
 					width: mx2vw(343px);
