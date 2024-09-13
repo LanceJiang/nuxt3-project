@@ -92,11 +92,11 @@
 						<div class="desc-wrap pl-16">
 							<header class="title justify-end mobile:hidden">
 								<svg-icon name="page" class="icon" />Extensive Design Templates – Design Made Easy</header>
-							<p class="desc text-right">
+							<p class="desc">
 								<span class="font-bold">Effortless Creativity:</span>
 								Explore our extensive design templates, making it easy to create stunning products without any design skills.
 							</p>
-							<p class="desc text-right">
+							<p class="desc">
 								<span class="font-bold">Personalized Touch:</span>
 								Customize templates to match your style and brand identity, making your merchandise truly yours.
 							</p>
@@ -128,9 +128,9 @@
 						<svg-icon name="globe" class="icon" />Flexible Options, Exceptional Service</header>
 					<div class="item items-start pc:pt-[20px] pc:-mt-[46px] pc:-mb-[30px]">
 						<img class="order-2 transform -translate-y-[20px]" src="@/assets/image/pod/growth_4.webp" />
-						<div class="desc-wrap pl-48">
+						<div class="desc-wrap pl-16">
 							<header class="title justify-end mobile:hidden"><svg-icon name="globe" class="icon" />Flexible Options, Exceptional Service</header>
-							<p class="desc text-right">
+							<p class="desc">
 								<span class="font-bold">Exceptional customer service:</span>
 								Offer tailored solutions, from labeled products to custom packaging, with 12/7 support to scale with your growing business.
 							</p>

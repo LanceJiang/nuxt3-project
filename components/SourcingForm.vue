@@ -61,6 +61,8 @@ const { data, error, pending, execute } = useFetch('https://bdapi.hyinsight.com/
 })
 const testApi = () => {
 	// console.log(/*JSON.stringify(process),*/ process.env.VITE_API_URL, process.env.VITE_UPLOAD_URL, 'VITE_UPLOAD_URL')
+	// console.log(import.meta.env.VITE_UPLOAD_URL, 'VITE_UPLOAD_URL')
+	// request.get('/system/config-currency/page', )
 	execute()
 	// console.error(data, 'data')
 	getRecommendAll1().then(res => {

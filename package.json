@@ -2,9 +2,10 @@
 	"private": true,
 	"scripts": {
 		"build": "nuxt build",
-		"dev": "nuxt dev --mode dev",
-		"prod": "nuxt dev --mode prod",
-		"generate": "nuxt generate",
+		"dev": "npx nuxi dev --dotenv=.env.dev",
+		"prod": "npx nuxi dev --dotenv=.env.prod",
+		"generate:dev": "nuxt generate --dotenv=.env.dev",
+		"generate": "nuxt generate --dotenv=.env.prod",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
 		"lint": "eslint --ext .js,.ts,.vue .",

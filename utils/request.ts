@@ -5,7 +5,12 @@ import { HttpResponse } from '@/api/interface'
 
 // 请求体拓展
 function configOptions(options: any = {}) {
+	// console.log(apiUrl, 'baseUrl', useRuntimeConfig())
 	options.headers = { 'access-token': getToken() }
+	if (!options.baseURL) {
+		// console.log(import.meta.env.VITE_API_URL, 'VITE_API_URL')
+		options.baseURL = import.meta.env.VITE_API_URL
+	}
 	return options
 }
 
@@ -14,12 +19,12 @@ function configOptions(options: any = {}) {
  * @param { String } url 请求地址
  * @param { Object } options 请求配置项
  */
-const fetch = (url: string, options?: object): Promise<any> => {
+const fetch_ = (url: string, options?: object): Promise<any> => {
 	const {
 		public: { apiUrl },
 	} = useRuntimeConfig()
 	// console.log(apiUrl, 'baseUrl', useRuntimeConfig())
-	/*// baseUrl 在生产环境中拿不到，暂时不知道什么原因，这里做一下兼容处理
+	/*!// baseUrl 在生产环境中拿不到，暂时不知道什么原因，这里做一下兼容处理
 	const _baseUrl = apiUrl ?? 'https://bdapi.hyinsight.com/admin-api'*/
 	const reqUrl = apiUrl + url
 
@@ -56,20 +61,24 @@ const fetch = (url: string, options?: object): Promise<any> => {
 	})
 }
 
+export const fetch = (url: string, options?: object): Promise<any> => {
+	return $fetch(url, configOptions(options))
+}
+
 export default new (class Http {
 	get<T>(url: string, params?: object): Promise<HttpResponse<T>> {
-		return fetch(url, { method: 'get', params })
+		return fetch_(url, { method: 'get', params })
 	}
 
 	post<T>(url: string, body?: object): Promise<HttpResponse<T>> {
-		return fetch(url, { method: 'post', body })
+		return fetch_(url, { method: 'post', body })
 	}
 
 	put<T>(url: string, body?: object): Promise<HttpResponse<T>> {
-		return fetch(url, { method: 'put', body })
+		return fetch_(url, { method: 'put', body })
 	}
 
 	delete<T>(url: string, body?: object): Promise<HttpResponse<T>> {
-		return fetch(url, { method: 'delete', body })
+		return fetch_(url, { method: 'delete', body })
 	}
 })()
