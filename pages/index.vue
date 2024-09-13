@@ -11,7 +11,7 @@
 			</el-carousel>
 
 			<div class="home-part1">
-				<div class="part-title">
+				<div class="part-title mobile:max-w-[70vw] mx-auto">
 					Lunch Your Business in 4 Easy Steps
 				</div>
 				<div class="box-wrap">
@@ -23,6 +23,10 @@
 					<div class="icon-desc icon-desc_1">
 						<svg_rate_gear class="icon icon_1"/>
 						hyinsight platform
+					</div>
+					<div class="icon-desc icon-desc_2">
+						<svg_rate_gear class="icon icon_2"/>
+						design & sourcing
 					</div>
 					<div class="icon-desc icon-desc_3">
 						<svg_rate_gear class="icon icon_3"/>
@@ -37,10 +41,6 @@
 						<div class="desc">Works with:</div>
 						<div class="platform" />
 						<el-button class="btn" type="primary" @click="goRegister" round>try it for free</el-button>
-						<div class="icon-desc icon-desc_2">
-							<svg_rate_gear class="icon icon_2"/>
-							design & sourcing
-						</div>
 					</div>
 					<svg_logo_txt class="logo-txt logo-bottom" />
 				</div>
@@ -202,18 +202,23 @@ const goRegister = () => {
 			}
 			&_1 {
 				position: absolute;
-				top: px2vw(40px);
-				left: px2vw(440px);
+				top: px2vw(100px);
+				left: px2vw(136px);
+			}
+			&_2 {
+				position: absolute;
+				top: px2vw(410px);
+				right: px2vw(268px);
 			}
 			&_3 {
 				position: absolute;
 				top: px2vw(548px);
-				left: px2vw(530px);
+				left: px2vw(230px);
 			}
 			&_4 {
 				position: absolute;
 				bottom: px2vw(430px);
-				right: px2vw(361px);
+				right: px2vw(268px);
 			}
 		}
 		.box-wrap {
