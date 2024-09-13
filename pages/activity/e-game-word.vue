@@ -58,12 +58,12 @@
 	<div class="part-3">
 		<div class="title">Sites that we have built for our clients.</div>
 		<div class="bg-dark" >
-<!--			<img class="mac_1" src="@/assets/image/activity/e-game-word/mac1.png" alt="" />
-			<img class="mac_2" src="@/assets/image/activity/e-game-word/mac2.png" alt="" />
-			<img class="mac_3" src="@/assets/image/activity/e-game-word/mac3.png" alt="" />
-			<img class="mac_4" src="@/assets/image/activity/e-game-word/mac4.png" alt="" />
-			<img class="mac_5" src="@/assets/image/activity/e-game-word/mac5.png" alt="" />-->
-			<div class="website"></div>
+			<img class="mac mac_1" src="@/assets/image/activity/e-game-word/mac_1.webp" alt="" />
+			<img class="mac mac_2" src="@/assets/image/activity/e-game-word/mac_2.webp" alt="" />
+			<img class="mac mac_3" src="@/assets/image/activity/e-game-word/mac_3.webp" alt="" />
+			<img class="mac mac_4" src="@/assets/image/activity/e-game-word/mac_4.webp" alt="" />
+			<img class="mac mac_5" src="@/assets/image/activity/e-game-word/mac_5.webp" alt="" />
+<!--			<div class="website"></div>-->
 		</div>
 	</div>
 </div>
@@ -76,16 +76,16 @@ definePageMeta({
 	layout: 'empty'
 })
 import keyboard_1 from '@/assets/image/activity/e-game-word/keyboard_1.webp'
-import keyboard_2 from '@/assets/image/activity/e-game-word/keyboard_2.webp'
-import keyboard_3 from '@/assets/image/activity/e-game-word/keyboard_3.webp'
-import mouse_1 from '@/assets/image/activity/e-game-word/mouse_1.webp'
-import mouse_2 from '@/assets/image/activity/e-game-word/mouse_2.webp'
-import mouse_3 from '@/assets/image/activity/e-game-word/mouse_3.webp'
-import e_1 from '@/assets/image/activity/e-game-word/e_1.webp'
-import e_2 from '@/assets/image/activity/e-game-word/e_2.webp'
-import e_3 from '@/assets/image/activity/e-game-word/e_3.webp'
-import o_1 from '@/assets/image/activity/e-game-word/o_1.webp'
-import o_2 from '@/assets/image/activity/e-game-word/o_2.webp'
+import keyboard_2 from '@/assets/image/activity/e-game-word/keyboard_2.png'
+import keyboard_3 from '@/assets/image/activity/e-game-word/keyboard_3.png'
+import mouse_1 from '@/assets/image/activity/e-game-word/mouse_1.jpg'
+import mouse_2 from '@/assets/image/activity/e-game-word/mouse_2.jpg'
+import mouse_3 from '@/assets/image/activity/e-game-word/mouse_3.jpg'
+import e_1 from '@/assets/image/activity/e-game-word/e_1.jpg'
+import e_2 from '@/assets/image/activity/e-game-word/e_2.jpg'
+import e_3 from '@/assets/image/activity/e-game-word/e_3.png'
+import o_1 from '@/assets/image/activity/e-game-word/o_1.jpg'
+import o_2 from '@/assets/image/activity/e-game-word/o_2.jpg'
 import o_3 from '@/assets/image/activity/e-game-word/o_3.webp'
 const groupItems = [
 	{
@@ -261,6 +261,10 @@ const groupItems = [
 					font-weight: 700;
 					text-transform: capitalize;
 					@include text-ellipsis_line(2);
+					font-size: mx2vw(11px);
+					height: mx2vw(32px);
+					line-height: mx2vw(16px);
+					word-break: unset;
 				}
 				.price {
 					color: #FF4626;
@@ -313,36 +317,58 @@ const groupItems = [
 	.part-3 {
 		overflow-x: hidden;
 		padding-bottom: mx2vw(90px);
+		font-size: mx2vw(12px);
+		text-transform: capitalize;
+		color: #AAA;
+		.title {
+			margin: mx2vw(40px) mx2vw(16px) 0;
+			padding-bottom: mx2vw(138px);
+			font-size: mx2vw(24px);
+			font-style: italic;
+			font-weight: 700;
+			color: #fff;
+			text-align: center;
+		}
 		.bg-dark {
 			position: relative;
 			width: mx2vw(409px);
-			height: mx2vw(1004px);
+			height: mx2vw(1158px);
 			margin-left: mx2vw(-13px);
 			margin-right: mx2vw(-21px);
 			background: url('@/assets/image/activity/e-game-word/part-3_bg_1.webp') no-repeat top center;
 			background-size: 100% 100%;
 			padding-left: mx2vw(20px);
+			.mac {
+				//margin-left: mx2vw(13px);
+				//opacity: 0.5;
+				position: relative;
+				&_1 {
+					//z-index: 11;
+					margin-top: mx2vw(-108px);
+					width: mx2vw(274px);
+				}
+				&_2 {
+					margin-top: mx2vw(62px);
+					margin-left: mx2vw(116px);
+					width: mx2vw(218px);
+				}
+				&_3 {
+					margin-top: mx2vw(64px);
+					width: mx2vw(251px);
+				}
+				&_4 {
+					margin-top: mx2vw(78px);
+					margin-left: mx2vw(106px);
+					width: mx2vw(216px);
+				}
+				&_5 {
+					margin-top: mx2vw(74px);
+					margin-left: mx2vw(21px);
+					width: mx2vw(224px);
+				}
+			}
 		}
-		/*.mac {
-			&_1 {
-				width: mx2vw(274px);
-				//margin-top: mx2vw(-108px);
-				margin-top: mx2vw(-110px);
-			}
-			&_2 {
-				width: mx2vw(218px);
-			}
-			&_3 {
-				width: mx2vw(251px);
-			}
-			&_4 {
-				width: mx2vw(216px);
-			}
-			&_5 {
-				width: mx2vw(224px);
-			}
-		}*/
-		.website {
+		/*.website {
 			position: absolute;
 			left: mx2vw(25px);
 			top: mx2vw(-107px);
@@ -350,19 +376,8 @@ const groupItems = [
 			height: mx2vw(1060px);
 			background: url('@/assets/image/activity/e-game-word/website.png') no-repeat top center;
 			background-size: 100% 100%;
-		}
-		font-size: mx2vw(12px);
-		text-transform: capitalize;
-		color: #AAA;
-		.title {
-			margin: mx2vw(40px) mx2vw(16px);
-			padding-bottom: mx2vw(108px);
-			font-size: mx2vw(24px);
-			font-style: italic;
-			font-weight: 700;
-			color: #fff;
-			text-align: center;
-		}
+		}*/
+
 /*
 		.sub {
 			flex: 1;
