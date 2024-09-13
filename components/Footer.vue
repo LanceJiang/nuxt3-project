@@ -101,11 +101,7 @@ const nav_groups = [
 				url: '/sell'
 			},
 			{
-				label: 'Create your storefront on',
-				url: '/sell'
-			},
-			{
-				label: 'Hyinsight',
+				label: 'Create your storefront on Hyinsight',
 				url: '/sell'
 			}
 		]
@@ -215,6 +211,8 @@ const activeNames = ref([])
 		display: flex;
 		justify-content: space-between;
 		padding: 60px;
+		max-width: 1200px;
+		margin: 0 auto;
 		.logo {
 			margin-right: 12px;
 			margin-left: 24px;

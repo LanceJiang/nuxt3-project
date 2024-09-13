@@ -89,7 +89,7 @@
 						<svg-icon name="page" class="icon" />Extensive Design Templates – Design Made Easy</header>
 					<div class="item items-start pc:mt-[50px]">
 						<img class="order-2 transform -translate-y-[20px]" src="@/assets/image/pod/growth_2.webp" />
-						<div class="desc-wrap pl-48">
+						<div class="desc-wrap pl-16">
 							<header class="title justify-end mobile:hidden">
 								<svg-icon name="page" class="icon" />Extensive Design Templates – Design Made Easy</header>
 							<p class="desc text-right">
