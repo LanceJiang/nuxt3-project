@@ -69,13 +69,14 @@
 	--el-menu-base-level-padding: 14px;
 
 	border-bottom: 0;
+	//flex: 1 0 auto;
+	//display: inline-flex;
+	gap: 40px;
+
 	&--horizontal {
 		display: flex;
 		align-items: center;
 	}
-	//flex: 1 0 auto;
-	//display: inline-flex;
-	gap: 40px;
 
 	.el-menu-item {
 		border-bottom: 0;

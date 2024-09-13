@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 		// 运行时常量
 		public: {
 			// 客户端-服务的都能访问
-			baseUrl: loadEnv(process.argv[process.argv.length - 1], './env').VITE_API_URL,
+			apiUrl: process.env.VITE_API_URL
 		},
 	},
 	modules: ['@pinia/nuxt', 'nuxt-windicss'], // , '@nuxtjs/i18n'

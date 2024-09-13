@@ -22,6 +22,8 @@ onMounted(() => {
 	useGlobalStore.updateDevice()
 	updateElDeviceClass()
 	window.addEventListener('resize', useGlobalStore.updateDevice)
+	// const config = useRuntimeConfig();
+	// console.error(config, 'config..', import.meta.env)
 })
 const updateElDeviceClass = () => {
 	const isMobile = useGlobalStore.isMobile
