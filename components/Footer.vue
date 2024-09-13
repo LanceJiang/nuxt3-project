@@ -16,7 +16,7 @@
 			</div>
 		</div>
 		<div class="mobile:hidden copy-right">
-			Copyright © 2024 - Designed by Hyinsight. Guangdong ICP for 2024166784-1
+			Copyright © 2024 - Designed by Hyinsight.<!-- Guangdong ICP for 2024166784-1-->
 		</div>
 		<!-- mobile -->
 		<el-collapse class="pc:hidden collapse-wrap" v-model="activeNames">

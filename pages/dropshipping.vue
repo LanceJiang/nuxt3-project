@@ -1,29 +1,26 @@
 <template>
 	<div class="dropshipping-wrap column-page-wrap bg-white">
 		<div class="local-container">
-			<header class="dropshipping_header">
+			<header class="dropshipping_header cursor-pointer" @click="goLogin">
 <!--				<div class="title">Kickstart Your Brand Journey Instantly</div>
 				<p class="desc">Effortless dropshipping with quality products and unbeatable prices—your path to launching a successful ecommerce starts here.</p>-->
-				<el-button class="btn" @click="goLogin">Start Now</el-button>
+				<el-button class="btn">Start Now</el-button>
 			</header>
 
 			<div class="common-inner-auto dropshipping-part1">
 
-				<header class="pc:hidden part-title part-title--mobile ">The Hidden Challenges of Dropshipping</header>
-				<div class="pc:hidden desc-box desc-box--mobile">
-					<span class="icon" />
-					<div class="desc">
-						Dropshipping is a fantastic way to start a business, but it comes with hidden challenges that can derail your success.</div>
-				</div>
+				<header class="part-title part-title--mobile">The Hidden Challenges of Dropshipping</header>
+				<div class="title-tip">
+					Dropshipping is a fantastic way to start a business, but it comes with hidden challenges that can derail your success.</div>
 				<div class="item pr-[18px]">
 					<img class="pc:order-2" src="@/assets/image/dropshipping/part1_1.webp" />
 					<div class="desc-wrap">
-						<header class="mobile:hidden part-title transform translate-x-[140px]" style="text-align: right;">The Hidden Challenges of Dropshipping</header>
-						<div class="mobile:hidden desc-box">
-							<span class="icon" />
-							<div class="desc">
-								Dropshipping is a fantastic way to start a business, but it comes with hidden challenges that can derail your success.</div>
-						</div>
+<!--						<header class="mobile:hidden part-title transform translate-x-[140px]" style="text-align: right;">The Hidden Challenges of Dropshipping</header>-->
+<!--						<div class="mobile:hidden desc-box">-->
+<!--							<span class="icon" />-->
+<!--							<div class="desc">-->
+<!--								Dropshipping is a fantastic way to start a business, but it comes with hidden challenges that can derail your success.</div>-->
+<!--						</div>-->
 						<div class="desc-box">
 							<svg-icon name="exclamation-mark" class="icon" />
 							<div class="desc">
@@ -62,23 +59,20 @@
 					</div>
 				</div>
 
-				<header class="pc:hidden part-title part-title--mobile" style="text-align: left;">How Hyinsight Enhances Your Efficiency</header>
-				<div class="pc:hidden desc-box desc-box--mobile">
-					<span class="icon" />
-					<div class="desc">
-						We are here to help you navigate these challenges, offering a seamless experience from start to finish.
-					</div>
+				<header class="part-title part-title--mobile">How Hyinsight Enhances Your Efficiency</header>
+				<div class="title-tip max-w-[580px] mx-auto">
+					We are here to help you navigate these challenges, offering a seamless experience from start to finish.
 				</div>
 				<div class="item pl-[18px]">
 					<img src="@/assets/image/dropshipping/part1_2.webp" />
 					<div class="desc-wrap">
-						<header class="mobile:hidden part-title transform -translate-x-[140px]" style="text-align: left;">How Hyinsight Enhances Your Efficiency</header>
+<!--						<header class="mobile:hidden part-title transform -translate-x-[140px]" style="text-align: left;">How Hyinsight Enhances Your Efficiency</header>
 						<div class="mobile:hidden desc-box">
 							<span class="icon" />
 							<div class="desc">
 								We are here to help you navigate these challenges, offering a seamless experience from start to finish.
 							</div>
-						</div>
+						</div>-->
 						<div class="desc-box">
 							<svg-icon name="star" class="icon" />
 							<div class="desc">
@@ -129,7 +123,7 @@
 				<div class="part-title">
 					Popular Value-added Services
 				</div>
-				<div class="text-center max-w-[880px] mx-auto">
+				<div class="title-tip max-w-[880px] mx-auto">
 					Explore and customize value-added services in the service marketplace tailored to your store's primary product categories and unique business needs. Below are some popular value-added services utilized by our clients:
 				</div>
 				<div class="box-wrap">
@@ -239,14 +233,19 @@ const  goLogin = () => {
 		.part-title {
 			color: #1b1b1b;
 		}
+		.title-tip {
+			text-align: center;
+			margin-top: -8px;
+			//padding-bottom: 50px;
+		}
 		color: #1b1b1b;
 	}
 	&-part1 {
 		display: flex;
 		flex-direction: column;
 		.item {
-			//padding-top: 64px;
-			padding-top: 170px;
+			padding-top: 50px;
+			//padding-top: 170px;
 			padding-bottom: 30px;
 			display: flex;
 			align-items: center;
@@ -254,7 +253,7 @@ const  goLogin = () => {
 			gap: 110px;
 			.desc-wrap {
 				// 120 - 60
-				margin-top: -60px;
+				//margin-top: -60px;
 				display: flex;
 				flex-direction: column;
 				gap: 24px;
@@ -319,17 +318,21 @@ const  goLogin = () => {
 	.dropshipping {
 		&-wrap {
 			font-size: mx2vw(14px);
+			.title-tip {
+				color: #605E5C;
+				margin-top: mx2vw(-10px);
+				//padding-bottom: mx2vw(16px);
+			}
 		}
 		&-part1 {
-			.desc-box--mobile {
-				margin-bottom: mx2vw(16px);
+			.desc-box {
 				font-size: mx2vw(14px);
-				text-align: center;
 			}
 			.item {
 				flex-direction: column;
 				gap: 0;
 				padding: 0;
+				padding-top: mx2vw(16px);
 				.desc {
 					&-wrap {
 						margin-top: mx2vw(14px);
@@ -359,7 +362,7 @@ const  goLogin = () => {
 		}
 		&-part2 {
 			.box-wrap {
-				margin-top: mx2vw(24px);
+				margin-top: mx2vw(16px);
 				margin-bottom: 0;
 				gap: mx2vw(10px);
 				.item {
