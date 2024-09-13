@@ -21,7 +21,7 @@
 				{{ group.title }}
 			</header>
 			<div class="box-wrap">
-				<div v-for="(v, j) of group.items" :key="j" class="item">
+				<div v-for="(v, j) of group.items" :key="j" class="item" @click.stop="jumpUrl(v.url)">
 					<img class="img" :src="v.img" alt="" />
 					<div class="txt">{{v.txt}}</div>
 					<div class="price">{{v.price}}</div>
@@ -70,6 +70,8 @@
 </template>
 
 <script setup lang="ts">
+import {jumpUrl} from "~/utils";
+
 definePageMeta({
 	layout: 'empty'
 })
@@ -92,17 +94,20 @@ const groupItems = [
 			{
 				img: keyboard_1,
 				txt: 'K321 wired keyboard',
-				price: '$10.99'
+				price: '$10.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=d0f1e2176b030c3b01f81a811e4466fa'
 			},
 			{
 				img: keyboard_2,
-				txt: 'Qianxingzhe Mechanical ...',
-				price: '$16.99'
+				txt: 'Qianxingzhe Mechanical Keyboard',
+				price: '$16.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=0c9679924b97962208d35f31156888bf'
 			},
 			{
 				img: keyboard_3,
 				txt: 'Punk Mechanical Keyboard',
-				price: '$35.99'
+				price: '$35.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=7c3dbb34841e960c1c6418a262aa573d'
 			}
 		]
 	},
@@ -112,17 +117,20 @@ const groupItems = [
 			{
 				img: mouse_1,
 				txt: 'PAW3995 E-sports Mouse',
-				price: '$67.99'
+				price: '$67.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=70273ab39fab1bb0ea2322cefd53c04d'
 			},
 			{
 				img: mouse_2,
 				txt: 'Forerunner G5 wired Mouse',
-				price: '$18.99'
+				price: '$18.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=34c0a960c3c90d54503b351bc1a0ef2a'
 			},
 			{
 				img: mouse_3,
-				txt: 'M133 Transparent ...',
-				price: '$13.99'
+				txt: 'M133 Transparent Mouse',
+				price: '$13.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=2d051a2253e72a80d83261fa2e524c88'
 			}
 		]
 	},
@@ -132,17 +140,20 @@ const groupItems = [
 			{
 				img: e_1,
 				txt: 'cat ear headphones',
-				price: '$14.99'
+				price: '$14.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=14dc37be6459f3da9c99d5632e02cd7d'
 			},
 			{
 				img: e_2,
 				txt: 'E-sports gaming headset',
-				price: '$11.99'
+				price: '$11.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=da5d837a5b9dc7e721a4577a31390143'
 			},
 			{
 				img: e_3,
 				txt: 'Qianxingzhe X15 headset',
-				price: '$19.99'
+				price: '$19.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=a82ade44f7741e55b8baafc1f7f6699d'
 			}
 		]
 	},
@@ -151,18 +162,21 @@ const groupItems = [
 		items: [
 			{
 				img: o_1,
-				txt: 'Fluid Rhythm Atmosphere ...',
-				price: '$57.99'
+				txt: 'Fluid Rhythm Atmosphere Speaker',
+				price: '$57.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=2558aacd892e6f8f78c285da20423a57'
 			},
 			{
 				img: o_2,
 				txt: 'Pixel Photo Frame',
-				price: '$26.99'
+				price: '$26.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=31208c3d3b42a8b6fcfbb525286c9040'
 			},
 			{
 				img: o_3,
-				txt: 'Desktop Animation ...',
-				price: '$16.99'
+				txt: ' Desktop Animation Display',
+				price: '$16.99',
+				url: 'https://seller.hyinsight.com/#/home/productDetail?goodsId=7f29fa143b3bd9771b362b4c4ef871cc'
 			}
 		]
 	}
@@ -246,6 +260,7 @@ const groupItems = [
 					margin: mx2vw(8px) 0;
 					font-weight: 700;
 					text-transform: capitalize;
+					@include text-ellipsis_line(2);
 				}
 				.price {
 					color: #FF4626;
