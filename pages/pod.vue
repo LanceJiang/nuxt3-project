@@ -4,7 +4,7 @@
 			<div class="part-title" style="padding-top: 40px;">
 				Print On Demand
 			</div>
-			<div class="text-center mobile:mb-[24px]">
+			<div class="title-tip text-center mobile:mb-[24px]">
 				Start Your Online Business with Ease Create and sell custom products with just one click.
 			</div>
 			<div class="mobile:hidden mt-[16px] mb-[24px] text-center">
@@ -36,7 +36,7 @@
 			<div class="part-title">
 				Turn your creativity into profit with our print-on-demand services.
 			</div>
-			<div class="services-tip text-center">
+			<div class="title-tip text-center">
 				Whether you're an artist, entrepreneur, or creative enthusiast, we make it easy for you to launch your own brand and connect with your followers.
 			</div>
 			<div class="services-wrap">
@@ -74,7 +74,7 @@
 							<header class="title mobile:hidden"><svg-icon name="gift" class="icon" /> Endless Product Selection – Create Your Signature Line</header>
 							<p class="desc">
 								<span class="font-bold">Tailored for Your Brand:</span>
-								Choose from a wide array of products like apparel, accessories, and more, giving you the flexibility to create a unique merchandise line that resonates with your customers.
+								Choose from a range of products, including apparel and accessories, to create a unique merchandise line that connects with your customers.
 							</p>
 							<p class="desc">
 								<span class="font-bold">Premium Quality:</span>
@@ -94,7 +94,7 @@
 								<svg-icon name="page" class="icon" />Extensive Design Templates – Design Made Easy</header>
 							<p class="desc text-right">
 								<span class="font-bold">Effortless Creativity:</span>
-								Dive into our vast library of design templates that make it easy for you to create stunning products without any design experience.
+								Explore our extensive design templates, making it easy to create stunning products without any design skills.
 							</p>
 							<p class="desc text-right">
 								<span class="font-bold">Personalized Touch:</span>
@@ -113,7 +113,7 @@
 							<header class="title mobile:hidden"><svg-icon name="airplane" class="icon" />48 Hours Lightning-Fast Shipping – Start Selling in No Time</header>
 							<p class="desc">
 								<span class="font-bold">Quick Turnaround:</span>
-								We handle the production and shipping, ensuring your products are ready to ship within 48 hours. This means you can start selling and profiting almost immediately.
+								We handle the production and shipping, ensuring your products are ready to ship within 48 hours. <br/>This means you can start selling and profiting almost immediately.
 							</p>
 							<p class="desc">
 								<span class="font-bold">Global Shipping:</span>
@@ -131,8 +131,8 @@
 						<div class="desc-wrap pl-48">
 							<header class="title justify-end mobile:hidden"><svg-icon name="globe" class="icon" />Flexible Options, Exceptional Service</header>
 							<p class="desc text-right">
-								<span class="font-bold">Hyinsight prioritizes exceptional customer service,</span>
-								offering tailored, customizable solutions for a seamless and personalized experience. From labeled product to custom packaging, 7*24H service Hyinsight’s flexible options scale with your growing business.
+								<span class="font-bold">Exceptional customer service:</span>
+								Offer tailored solutions, from labeled products to custom packaging, with 12/7 support to scale with your growing business.
 							</p>
 						</div>
 					</div>
@@ -277,6 +277,12 @@ const localJump = () => jumpUrl('https://seller.hyinsight.com/#/home/searchResul
 .pro_mobile {
 	.pod-wrap {
 		font-size: mx2vw(14px);
+		.part-title {
+			font-size: mx2vw(20px);
+		}
+		.title-tip {
+			color: #605E5C;
+		}
 		// 阶梯
 		.ladder {
 			&_item {
@@ -290,7 +296,7 @@ const localJump = () => jumpUrl('https://seller.hyinsight.com/#/home/searchResul
 					margin: mx2vw(12px) 0;
 				}
 				.desc {
-					//font-size: mx2vw(14px);
+					font-size: mx2vw(14px);
 					//max-width: 570px;
 					&-wrap {
 						//header {
@@ -310,9 +316,6 @@ const localJump = () => jumpUrl('https://seller.hyinsight.com/#/home/searchResul
 		}
 		// 服务
 		.services {
-			/*&-tip {
-				font-size: mx2vw(14px);
-			}*/
 			&-wrap {
 				margin-top: mx2vw(24px);
 				.item {

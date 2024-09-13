@@ -1,10 +1,10 @@
 <template>
 	<div class="sell-wrap column-page-wrap bg-white">
 		<div class="local-container">
-			<header class="sell_header">
+			<header class="sell_header cursor-pointer" @click="localJump">
 <!--				<div class="title">Kickstart Your Brand Journey Instantly</div>-->
 <!--				<p class="desc">Effortless sourcing with quality products and unbeatable prices—your path to launching a successful ecommerce starts here.</p>-->
-				<el-button class="btn" type="primary" @click="localJump">Connect your store now</el-button>
+				<el-button class="btn" type="primary">Connect your store now</el-button>
 			</header>
 			<div class="platform-wrap">
 				<div class="platform common-inner-auto">

@@ -5,10 +5,10 @@
 		<svg_polygon_3 class="polygon_3"/>
 		<svg_polygon_4 class="polygon_4"/>
 		<div class="local-container">
-			<header class="sourcing_header">
+			<header class="sourcing_header cursor-pointer" @click="scrollTo">
 <!--				<div class="title">Kickstart Your Brand Journey Instantly</div>
 				<p class="desc">Effortless sourcing with quality products and unbeatable prices—your path to launching a successful ecommerce starts here.</p>-->
-				<el-button class="btn" type="primary" round @click="scrollTo">Get Started</el-button>
+				<el-button class="btn" type="primary" round>Get Started</el-button>
 			</header>
 
 			<div class="common-inner-auto sourcing-part1">
@@ -65,7 +65,7 @@
 							<div class="desc-box">
 								<svg-icon name="pencil" class="icon" />
 								<p class="desc">
-									Experience rapid responses with 24-hour feedback to keep your sourcing process smooth and efficient, ensuring you stay on track with your brand’s needs.
+									Get rapid responses with 24-hour feedback to make your sourcing process smooth and efficient,and keep your brand on track.
 								</p>
 							</div>
 						</div>

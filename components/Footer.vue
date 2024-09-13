@@ -30,7 +30,7 @@
 				<svg-icon v-for="icon of logo_links" :name="icon.icon" :class="['icon', icon.url ? 'link' : '']" @click="jumpUrl(icon.url)"></svg-icon>
 			</div>
 			<div class="copy-right">
-				Copyright © 2024 - Designed by Hyinsight. Guangdong ICP for 2024166784-1
+				Copyright © 2024 - Designed by Hyinsight. <!--Guangdong ICP for 2024166784-1-->
 			</div>
 		</div>
 	</footer>

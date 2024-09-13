@@ -2,11 +2,11 @@
 	<div class="home-wrap column-page-wrap bg-white">
 		<div class="local-container">
 			<el-carousel class="home_header" height="100%">
-				<el-carousel-item class="banner banner_1">
-					<el-button class="btn" type="primary" @click="goLogin">Get Started</el-button>
+				<el-carousel-item class="banner banner_1" @click="goLogin">
+					<el-button class="btn" type="primary">Get Started</el-button>
 				</el-carousel-item>
-				<el-carousel-item class="banner banner_2">
-					<el-button class="btn" type="primary" @click="jumpUrl('https://seller.hyinsight.com/#/home/searchResults?categoryId=1726425774407069798&categoryName=Consumer%20Electronics')">Get Started</el-button>
+				<el-carousel-item class="banner banner_2" @click="jumpUrl('https://seller.hyinsight.com/#/home/searchResults?categoryId=1726425774407069798&categoryName=Consumer%20Electronics')">
+					<el-button class="btn" type="primary">Get Started</el-button>
 				</el-carousel-item>
 			</el-carousel>
 
@@ -113,6 +113,7 @@ const goRegister = () => {
 			background: url('@/assets/image/home/banner_1.webp') no-repeat top center;
 			background-size: 100% 100%;
 			height: 100%;
+			cursor: pointer;
 			&_1 {
 				background-image: url('@/assets/image/home/banner_1.webp');
 				.btn {
@@ -211,7 +212,7 @@ const goRegister = () => {
 			}
 			&_4 {
 				position: absolute;
-				bottom: px2vw(440px);
+				bottom: px2vw(430px);
 				right: px2vw(361px);
 			}
 		}
@@ -314,6 +315,7 @@ const goRegister = () => {
 					height: px2vw(48px);
 					font-size: px2vw(20px);
 					padding: 0;
+					font-weight: 700;
 					border-radius: px2vw(6px);
 					text-transform: capitalize;
 					margin-bottom: px2vw(47px);
@@ -369,7 +371,7 @@ const goRegister = () => {
 				//display: flex;
 				//align-items: center;
 				//color: #212121;
-				font-size: mx2vw(16px);
+				font-size: mx2vw(14px);
 				//font-weight: 600;
 				//text-transform: capitalize;
 				//cursor: pointer;
@@ -377,8 +379,8 @@ const goRegister = () => {
 					color: #375AE5;
 				}
 				.icon {
-					margin-right: mx2vw(6px);
-					font-size: mx2vw(24px);
+					margin-right: mx2vw(4px);
+					font-size: mx2vw(16px);
 					/*&_1 {
 						color: #02D6DD;
 					}
@@ -395,37 +397,32 @@ const goRegister = () => {
 				&_1 {
 					position: absolute;
 					top: mx2vw(176px);
-					left: mx2vw(68px);
+					left: mx2vw(178px);
+					//right: mx2vw(-16px);
 				}
 				&_2 {
 					position: absolute;
-					top: mx2vw(386px);
-					left: mx2vw(170px);
+					top: mx2vw(298px);
+					left: 0;
 				}
 				&_3 {
 					position: absolute;
-					top: mx2vw(514px);
-					left: mx2vw(60px);
+					top: mx2vw(428px);
+					left: mx2vw(252px);
 				}
 				&_4 {
 					position: absolute;
-					bottom: mx2vw(0px);
-					right: mx2vw(16px);
+					bottom: mx2vw(120px);
+					left: mx2vw(28px);
 				}
 			}
 			.box-wrap {
 				position: relative;
-				//height: px2vw(1255px);
-				height: mx2vw(680px);
-				//width: px2vw(1320px);
+				height: mx2vw(690px);
 				margin: 0 auto;
-				/*margin: px2vw(280px) auto px2vw(226px);
-				//margin-top: px2vw(280px);
-				//margin-bottom: px2vw(226px);
+				/*
 				width: px2vw(309px);
-				height: px2vw(648px);
-				background: url('@/assets/image/home/number.webp') no-repeat top center;
-				background-size: 100% 100%;*/
+				height: px2vw(648px);*/
 				.p_order {
 					//position: absolute;
 					width: mx2vw(188px);
@@ -439,7 +436,7 @@ const goRegister = () => {
 					}
 					&_2 {
 						left: 0;
-						top: mx2vw(310px);
+						top: mx2vw(320px);
 						//background-image: url('@/assets/image/home/order_2.webp');
 					}
 					&_3 {
@@ -490,39 +487,22 @@ const goRegister = () => {
 						margin-top: 0;
 						font-size: mx2vw(14px);
 						line-height: mx2vw(40px);
+						text-align: center;
 					}
 					.platform {
-						/*width: px2vw(387px);
-						height: px2vw(35px);*/
-						width: mx2vw(261px);
-						height: mx2vw(23px);
+						width: 100%;
+						height: mx2vw(31px);
 						//background: url('@/assets/image/home/platform.webp') no-repeat top center;
 						//background-size: 100% 100%;
-						margin: mx2vw(10px) 0;
-						/*display: flex;
-						align-items: center;
-						gap: px2vw(24px);
-						.svg {
-							//width: px2vw(80px);
-							//height: px2vw(31px);
-							//width: px2vw(127px);
-							//height: px2vw(49px);
-							&_1 {
-								width: px2vw(127px);
-								height: px2vw(49px);
-							}
-							&_2 {}
-							&_3 {}
-							&_4 {}
-						}*/
+						margin: mx2vw(12px) 0;
 					}
 					.btn {
 						//position: absolute;
 						//left: px2vw(70px);
 						//bottom: px2vw(72px);
 						width: mx2vw(216px);
-						height: mx2vw(48px);
-						font-size: mx2vw(20px);
+						height: mx2vw(32px);
+						font-size: mx2vw(14px);
 						//padding: 0;
 						border-radius: mx2vw(6px);
 						display: block;

@@ -16,12 +16,12 @@ function configOptions(options: any = {}) {
  */
 const fetch = (url: string, options?: object): Promise<any> => {
 	const {
-		public: { baseUrl },
+		public: { apiUrl },
 	} = useRuntimeConfig()
-
-	// baseUrl 在生产环境中拿不到，暂时不知道什么原因，这里做一下兼容处理
-	const _baseUrl = baseUrl ?? 'https://bdapi.hyinsight.com/admin-api'
-	const reqUrl = _baseUrl + url
+	// console.log(apiUrl, 'baseUrl', useRuntimeConfig())
+	/*// baseUrl 在生产环境中拿不到，暂时不知道什么原因，这里做一下兼容处理
+	const _baseUrl = apiUrl ?? 'https://bdapi.hyinsight.com/admin-api'*/
+	const reqUrl = apiUrl + url
 
 	// 不设置key，始终拿到的都是第一个请求的值，参数一样则不会进行第二次请求
 	const key = hash(JSON.stringify(options) + url)
