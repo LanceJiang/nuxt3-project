@@ -19,8 +19,8 @@ const { locale } = useI18n()
 const appRef = ref()
 onMounted(() => {
 	themeConfig.value = Cookies.get('theme-mode') || 'light'
-	useGlobalStore.updateDevice()
-	updateElDeviceClass()
+	// useGlobalStore.updateDevice()
+	nextTick(updateElDeviceClass)
 	window.addEventListener('resize', useGlobalStore.updateDevice)
 	// const config = useRuntimeConfig();
 	// console.error(config, 'config..', import.meta.env)
@@ -41,7 +41,7 @@ const updateElDeviceClass = () => {
 }
 watch(() => useGlobalStore.isMobile, () => {
 	// console.log(isMobile, 'watch useGlobalStore.isMobile')
-	updateElDeviceClass()
+	nextTick(updateElDeviceClass)
 }/*, { immediate: true }*/)
 onUnmounted(() => {
 	window.removeEventListener('resize', useGlobalStore.updateDevice)
