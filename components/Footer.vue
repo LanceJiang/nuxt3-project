@@ -19,11 +19,13 @@
 			Copyright © 2024 - Designed by Hyinsight.<!-- Guangdong ICP for 2024166784-1-->
 		</div>
 		<!-- mobile -->
-		<el-collapse class="pc:hidden collapse-wrap" v-model="activeNames">
-			<el-collapse-item class="links-wrap" v-for="(group, i) of nav_groups" :title="group.title" :name="i">
-				<div :class="['text', link.url ? 'link' : '']" v-for="link of group.items" @click="jumpUrl(link.url)">{{ link.label }}</div>
-			</el-collapse-item>
-		</el-collapse>
+		<client-only>
+			<el-collapse class="pc:hidden collapse-wrap" v-model="activeNames">
+				<el-collapse-item class="links-wrap" v-for="(group, i) of nav_groups" :title="group.title" :name="i">
+					<div :class="['text', link.url ? 'link' : '']" v-for="link of group.items" @click="jumpUrl(link.url)">{{ link.label }}</div>
+				</el-collapse-item>
+			</el-collapse>
+		</client-only>
 		<div class="mobile-icons-wrap icons-wrap">
 			<svg-icon name="logo" class="logo" />
 			<div class="icon-list">
