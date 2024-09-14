@@ -19,7 +19,7 @@ const { locale } = useI18n()
 const appRef = ref()
 onMounted(() => {
 	themeConfig.value = Cookies.get('theme-mode') || 'light'
-	// useGlobalStore.updateDevice()
+	useGlobalStore.updateDevice()
 	nextTick(updateElDeviceClass)
 	window.addEventListener('resize', useGlobalStore.updateDevice)
 	// const config = useRuntimeConfig();
