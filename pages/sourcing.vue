@@ -8,7 +8,7 @@
 			<header class="sourcing_header cursor-pointer" @click="scrollTo">
 <!--				<div class="title">Kickstart Your Brand Journey Instantly</div>
 				<p class="desc">Effortless sourcing with quality products and unbeatable prices—your path to launching a successful ecommerce starts here.</p>-->
-				<el-button class="btn" type="primary" round>Get Started</el-button>
+<!--				<el-button class="btn" type="primary" round>Get Started</el-button>-->
 			</header>
 
 			<div class="common-inner-auto sourcing-part1">

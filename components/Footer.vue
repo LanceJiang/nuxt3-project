@@ -39,8 +39,7 @@
 </template>
 
 <script lang="ts" setup>
-import { jumpUrl } from '@/utils'
-
+// import { jumpUrl } from '@/utils'
 // import svg_facebook from '@/assets/svg/facebook.svg'
 // import svg_tiktok from '@/assets/svg/tiktok.svg'
 // import svg_in from '@/assets/svg/in.svg'
@@ -294,6 +293,7 @@ const activeNames = ref([])
 				color: var(--primary-color);
 				height: mx2vw(52px);
 				line-height: mx2vw(52px);
+				text-transform: capitalize;
 			}
 			&:deep(.el-collapse-item__content) {
 				padding-bottom: mx2vw(10px);

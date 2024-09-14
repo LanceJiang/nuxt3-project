@@ -10,13 +10,15 @@
 						:ellipsis="false"
 					>
 						<svg-icon name="menu" class="icon more-menu" @click="visible = true" />
-						<el-menu-item class="nav-item nav-logo"  @click="goHome">
-							<svg-icon name="logo" class="icon logo" />
-						</el-menu-item>
+						<client-only>
+							<el-menu-item class="nav-item nav-logo" @click="goHome">
+								<svg-icon name="logo" class="icon logo" />
+							</el-menu-item>
 
-						<template v-if="!useGlobalStore.isMobile">
-							<el-menu-item class="nav-item" :index="nav.path" v-for="(nav, i) in menuList" :key="i" @click="handleClickMenu(nav)">{{nav.label}}</el-menu-item>
-						</template>
+							<template v-if="!useGlobalStore.isMobile">
+								<el-menu-item class="nav-item" :index="nav.path" v-for="(nav, i) in menuList" :key="i" @click="handleClickMenu(nav)">{{nav.label}}</el-menu-item>
+							</template>
+						</client-only>
 <!--						<el-menu-item index="1">Processing Center</el-menu-item>
 						<el-sub-menu index="2">
 							<template #title>Workspace</template>

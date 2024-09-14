@@ -3,10 +3,10 @@
 		<div class="local-container">
 			<el-carousel class="home_header" height="100%">
 				<el-carousel-item class="banner banner_1" @click="goLogin">
-					<el-button class="btn" type="primary">Get Started</el-button>
+<!--					<el-button class="btn" type="primary">Get Started</el-button>-->
 				</el-carousel-item>
 				<el-carousel-item class="banner banner_2" @click="jumpUrl('https://seller.hyinsight.com/#/home/searchResults?categoryId=1726425774407069798&categoryName=Consumer%20Electronics')">
-					<el-button class="btn" type="primary">Get Started</el-button>
+<!--					<el-button class="btn" type="primary">Get Started</el-button>-->
 				</el-carousel-item>
 			</el-carousel>
 

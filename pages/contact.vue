@@ -1,13 +1,13 @@
 <template>
 	<div class="contact-wrap column-page-wrap bg-white">
 		<div class="local-container">
-			<header class="contact_header">
+			<header class="contact_header cursor-pointer" @click="jumpUrl('https://seller.hyinsight.com/#/helpCenter')">
 <!--				<div class="title">Customer support</div>
 				<p class="desc">
 					If you have any questions about Hyinsight- from creating an account to using the Hyinsight to tracking an order, check out our Help Center You'll find answers to our most frequently asked questions here.<br/>
 					If you can't find what you're looking for in the Help Center, don't hesitate to contact us via chat or email.
 				</p>-->
-				<el-button class="btn" type="primary">Help Center</el-button>
+<!--				<el-button class="btn" type="primary">Help Center</el-button>-->
 			</header>
 			<div class="box-wrap">
 				<div class="box">
@@ -15,7 +15,8 @@
 						Email
 					</header>
 					<div class="desc text-center">
-						Have a question or need more information? Get in touch with us via email, and we'll make sure to get back to you as quickly as possible. support@hyinsight.com
+						Have a question or need more information? Get in touch with us via email, and we'll make sure to get back to you as quickly as possible.
+						<a class="text-black" href="mailto:marketing@hyinsight.com">marketing@hyinsight.com</a>
 					</div>
 				</div>
 			</div>

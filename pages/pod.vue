@@ -70,7 +70,7 @@
 					<header class="title pc:hidden"><svg-icon name="gift" class="icon" />Endless Product Selection – Create Your Signature Line</header>
 					<div class="item pc:items-end pc:-mt-[30px]">
 						<img class="transform translate-y-[50px]" src="@/assets/image/pod/growth_1.webp" />
-						<div class="desc-wrap">
+						<div class="desc-wrap z-1">
 							<header class="title mobile:hidden"><svg-icon name="gift" class="icon" /> Endless Product Selection – Create Your Signature Line</header>
 							<p class="desc">
 								<span class="font-bold">Tailored for Your Brand:</span>
@@ -89,9 +89,10 @@
 						<svg-icon name="page" class="icon" />Extensive Design Templates – Design Made Easy</header>
 					<div class="item items-start pc:mt-[50px]">
 						<img class="order-2 transform -translate-y-[20px]" src="@/assets/image/pod/growth_2.webp" />
-						<div class="desc-wrap pl-16">
+						<div class="desc-wrap z-1 pl-16">
 							<header class="title justify-end mobile:hidden">
-								<svg-icon name="page" class="icon" />Extensive Design Templates – Design Made Easy</header>
+								<svg-icon name="page" class="icon" />Extensive Design Templates – Design Made Easy
+							</header>
 							<p class="desc">
 								<span class="font-bold">Effortless Creativity:</span>
 								Explore our extensive design templates, making it easy to create stunning products without any design skills.
@@ -106,10 +107,11 @@
 
 				<div class="item-box">
 					<header class="title pc:hidden">
-						<svg-icon name="airplane" class="icon" />48 Hours Lightning-Fast Shipping – Start Selling in No Time</header>
+						<svg-icon name="airplane" class="icon" />48 Hours Lightning-Fast Shipping – Start Selling in No Time
+					</header>
 					<div class="item items-start pc:mt-[20px]">
 						<img class="transform -translate-y-[60px]" src="@/assets/image/pod/growth_3.webp" />
-						<div class="desc-wrap">
+						<div class="desc-wrap z-1">
 							<header class="title mobile:hidden"><svg-icon name="airplane" class="icon" />48 Hours Lightning-Fast Shipping – Start Selling in No Time</header>
 							<p class="desc">
 								<span class="font-bold">Quick Turnaround:</span>
@@ -125,10 +127,11 @@
 
 				<div class="item-box">
 					<header class="title pc:hidden">
-						<svg-icon name="globe" class="icon" />Flexible Options, Exceptional Service</header>
+						<svg-icon name="globe" class="icon" />Flexible Options, Exceptional Service
+					</header>
 					<div class="item items-start pc:pt-[20px] pc:-mt-[46px] pc:-mb-[30px]">
 						<img class="order-2 transform -translate-y-[20px]" src="@/assets/image/pod/growth_4.webp" />
-						<div class="desc-wrap pl-16">
+						<div class="desc-wrap z-1 pl-16">
 							<header class="title justify-end mobile:hidden"><svg-icon name="globe" class="icon" />Flexible Options, Exceptional Service</header>
 							<p class="desc">
 								<span class="font-bold">Exceptional customer service:</span>

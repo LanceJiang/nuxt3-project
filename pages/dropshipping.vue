@@ -4,7 +4,7 @@
 			<header class="dropshipping_header cursor-pointer" @click="goLogin">
 <!--				<div class="title">Kickstart Your Brand Journey Instantly</div>
 				<p class="desc">Effortless dropshipping with quality products and unbeatable prices—your path to launching a successful ecommerce starts here.</p>-->
-				<el-button class="btn">Start Now</el-button>
+<!--				<el-button class="btn">Start Now</el-button>-->
 			</header>
 
 			<div class="common-inner-auto dropshipping-part1">
