@@ -166,7 +166,6 @@
 
 				.el-menu-item {
 					width: max-content;
-
 				}
 
 /*				.el-sub-menu {
@@ -175,6 +174,18 @@
 					}
 				}*/
 			}
+		}
+	}
+}
+// 兼容手机端
+.pro_pc {
+	.main-header {
+		&-box {
+			/*.el-overlay {
+				z-index: -1;
+			}*/
+		}
+		&_menu-drawer {
 		}
 	}
 }

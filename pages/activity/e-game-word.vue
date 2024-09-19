@@ -56,7 +56,7 @@
 		</div>
 	</div>
 	<div class="part-3">
-		<div class="title">Sites that we have built for our clients.</div>
+		<div class="title">Sites that we have built for our Partnered Influencers.</div>
 		<div class="bg-dark" >
 			<img class="mac mac_1" src="@/assets/image/activity/e-game-word/mac_1.webp" alt="" />
 			<img class="mac mac_2" src="@/assets/image/activity/e-game-word/mac_2.webp" alt="" />
