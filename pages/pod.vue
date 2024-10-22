@@ -229,7 +229,7 @@ const localJump = () => jumpUrl('https://seller.hyinsight.com/#/home/searchResul
 			align-items: center;
 			gap: 40px;
 			img {
-				//width: 486px;
+				width: 486px;
 				flex-shrink: 0;
 				//border-radius: 8px;
 			}

@@ -163,7 +163,7 @@ const scrollTo = () => {
 		position: relative;
 		width: 100%;
 		height: px2vw(578px);
-		background: url('@/assets/image/sourcing/banner_1.webp') no-repeat top center;
+		background: url('@/assets/image/sourcing/banner.webp') no-repeat top center;
 		background-size: 100% 100%;
 		/*.title {
 			font-size: px2vw(32px);
