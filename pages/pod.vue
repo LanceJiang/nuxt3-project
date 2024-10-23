@@ -1,6 +1,6 @@
 <template>
 	<div class="pod-wrap column-page-wrap bg-white">
-		<div class="common-inner-auto">
+<!--		<div class="common-inner-auto">
 			<div class="part-title" style="padding-top: 40px;">
 				Print On Demand
 			</div>
@@ -10,11 +10,11 @@
 			<div class="mobile:hidden mt-[16px] mb-[24px] text-center">
 				<el-button class="min-w-[230px]" type="primary" round @click="localJump">Start Selling</el-button>
 			</div>
-		</div>
-		<img class="video-demo" src="~@/assets/image/pod/banner.webp" />
-		<div class="pc:hidden mt-[16px] text-center">
+		</div>-->
+		<img class="video-demo" src="~@/assets/image/pod/banner.webp" @click="localJump" />
+<!--		<div class="pc:hidden mt-[16px] text-center">
 			<el-button class="min-w-[230px]" type="primary" round @click="localJump">Start Selling</el-button>
-		</div>
+		</div>-->
 		<!--demand-->
 		<div class="common-inner-auto">
 			<div class="part-title">
@@ -184,7 +184,7 @@ const localJump = () => jumpUrl('https://seller.hyinsight.com/#/home/searchResul
 	//overflow-x: hidden;
 	.video-demo {
 		width: 100%;
-		//cursor: pointer;
+		cursor: pointer;
 	}
 	// 阶梯
 	.ladder {
